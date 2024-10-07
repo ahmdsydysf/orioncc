@@ -36,8 +36,11 @@ class ClientSeeder extends Seeder
             ['name' => 'Streit Group' , 'logo' => 'Streit Group.jpg' ],
             ['name' => 'RAK Economic Zone' , 'logo' => 'RAK Economic Zone.jpg' ],
             ['name' => 'AG Aluminum' , 'logo' => 'AG Aluminum.jpg' ],
-            ['name' => 'UTICO' , 'logo' => 'UTICO.jpg' ],
             ['name' => 'FINE' , 'logo' => 'FINE.jpg' ],
+            ['name' => 'iPack' , 'logo' => 'iPack.jpg' ],
+            ['name' => 'Fence International' , 'logo' => 'Fence_International.jpg' ],
+            ['name' => 'INEGRA' , 'logo' => null ],
+            ['name' => 'Etihad Railway' , 'logo' => 'Etihad_Railway.jpg' ],
         ];
         foreach ($data as $key => $value) {
             Client::create([

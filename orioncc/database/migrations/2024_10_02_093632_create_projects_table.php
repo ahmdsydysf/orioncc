@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->enum('status' ,['completed' , 'in progress']);
+            $table->enum('priority' ,['h-v1' , 'h-v2' , 'm-v1' , 'm-v2' , 'l-v1' , 'l-v2']);
             $table->string('main_image')->default('main.webp');
             $table->string('consultant')->nullable();
             $table->text('mini_desc')->nullable();
