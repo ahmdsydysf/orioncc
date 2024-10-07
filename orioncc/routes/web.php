@@ -10,6 +10,7 @@ Route::get('/', [MainHomePageController::class , 'index'])->name('home');
 
 Route::resource('projects' , ProjectController::class);
 Route::resource('sectors' , SectorController::class);
+Route::get('/projects-list', [ProjectController::class , 'indexOfList'])->name('indexOfList');
 
 // Route::get('/our-projects', function () {
 //     return view('orionccFront.projects');

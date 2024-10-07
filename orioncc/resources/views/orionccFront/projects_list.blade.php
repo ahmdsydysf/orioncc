@@ -19,7 +19,6 @@ $p_nam = 'projects';
 
 
 @section('page_content')
-
 <!--Page Header Start-->
 <section class="page-header">
     <div class="page-header-bg"
@@ -41,16 +40,15 @@ $p_nam = 'projects';
 </section>
 <!--Page Header End-->
 
-<!--Product Start-->
-<section class="product">
+<!--Product List Start-->
+<section class="product-list">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="product__items">
+                <div class="product-list__right">
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="product__showing-result">
-
                                 <div class="shop-search product__sidebar-single">
                                     <form action="#">
                                         <input type="text" placeholder="Search">
@@ -59,9 +57,9 @@ $p_nam = 'projects';
                                 <div class="product__menu-showing-sort">
                                     <div class="product__menu">
                                         <a href="{{ route('projects.index', ['page' => $page]) }}"
-                                            class="product__menu-icon-one active"><span class="icon-menu"></span></a>
+                                            class="product__menu-icon-one"><span class="icon-menu"></span></a>
                                         <a href="{{ route('indexOfList', ['page' => $page]) }}"
-                                            class="product__menu-icon-two"><span class="icon-list"></span></a>
+                                            class="product__menu-icon-two active"><span class="icon-list"></span></a>
                                     </div>
                                     <div class="product__showing-sort">
                                         <div class="select-box">
@@ -77,54 +75,41 @@ $p_nam = 'projects';
                             </div>
                         </div>
                     </div>
-                    <div class="product__all">
-                        <div class="row">
-                            @foreach ($allData as $data )
-
-                            <!--Product All Single Start-->
-                            <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="product__all-single">
-                                    <a href="{{ route('projects.show' ,['project'=>$data['id']] ) }}">
-                                        <div class="product__all-single-inner">
-                                            <div class="product__all-img">
-                                                <img src="{{ asset('orionFrontAssets/assets/images/project/' . $data->name . '/main.webp') }}"
-                                                    alt="">
-                                            </div>
-                                            <div class="product__all-content">
-                                                <h4 class="product__all-title"><a
-                                                        href="{{ route('projects.show' , ['project'=>$data['id']]) }}">{{
-                                                        $data->name }}</a></h4>
-                                                <p class="product__all-price">{{ $data->Client->name }}</p>
-                                                <div class="product__all-btn-box">
-                                                    <a href="{{ route('projects.show', ['project'=>$data['id']]) }}"
-                                                        class="thm-btn product__all-btn">More</a>
-                                                </div>
-                                            </div>
-                                            @if ($data->status == 'completed')
-                                            <div class="products__all-icon-boxes">
-                                                <span href="#" class="bg-lbn fnt-clr-g"><i
-                                                        class="fas fa-check-square px-2"></i>{{ $data->status }}</span>
-                                                <span href="#" class="bg-blu fnt-clr-w"><i
-                                                        class="far fa-calendar-alt px-2"></i>{{ $data->end }}</span>
-                                            </div>
-                                            @else
-                                            <div class="products__all-icon-boxes">
-                                                <span href="#" class="bg-lim fnt-clr-b"><i
-                                                        class="fas fa-spinner px-2"></i>{{ $data->status }}</span>
-
-                                            </div>
-                                            @endif
+                    @foreach ($allData as $data )
+                    <div class="product-list__inner">
+                        <!--Products List Single Start-->
+                        <div class="product-list__single">
+                            <a href="{{ route('projects.show' , ['project'=>$data['id']]) }}">
+                                <div class="product-list__single-inner">
+                                    <div class="product-list__img-box">
+                                        <div class="product-list__img">
+                                            <img src="{{ asset('orionFrontAssets/assets/images/project/'.$data->name.'/'.$data->main_image) }}"
+                                                alt="">
                                         </div>
-                                    </a>
+
+                                    </div>
+                                    <div class="product-list__content">
+                                        <h4 class="product-list__title"><a
+                                                href="{{ route('projects.show' , ['project'=>$data['id']]) }}">{{
+                                                $data->name }}</a>
+                                        </h4>
+                                        <p class="product-list__price">{{ $data->Client->name }}</p>
+                                        <p class="product-list__text">{{ $data->full_desc }}</p>
+                                        <div class="product-list__btn-box">
+                                            <a href="{{ route('projects.show' , ['project'=>$data['id']]) }}"
+                                                class="thm-btn product-list__btn">More</a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <!--Product All Single End-->
-                            @endforeach
+                            </a>
                         </div>
-                        <div class="row">
-                            <div class="col-xl-12">
-                                {{ $allData->appends(['page' => $page])->links('pagination::bootstrap-5') }}
-                            </div>
+                        <!--Products List Single End-->
+
+                    </div>
+                    @endforeach
+                    <div class="row">
+                        <div class="col-xl-12">
+                            {{ $allData->appends(['page' => $page])->links('pagination::bootstrap-5') }}
                         </div>
                     </div>
                 </div>

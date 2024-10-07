@@ -10,10 +10,21 @@ class ProjectController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
+        $page = $request->get('page', 1);
         $allData = Project::with(['Client','Sector'])->paginate(9);
-        return view('orionccFront.projects',['allData' => $allData]);
+        return view('orionccFront.projects',['allData' => $allData , 'page' => $page]);
+    }
+    /**
+     * Display a listing of the resource.
+     */
+    public function indexOfList(Request $request)
+    {
+        $page = $request->get('page', 1);
+
+        $allData = Project::with(['Client','Sector'])->paginate(9);
+        return view('orionccFront.projects_list',['allData' => $allData, 'page' => $page]);
     }
 
     /**
