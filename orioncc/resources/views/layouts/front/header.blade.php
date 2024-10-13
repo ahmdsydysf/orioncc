@@ -112,8 +112,8 @@
                                                 <li @class(['current'=> $p_nam == 'sectors'])>
                                                     <a href="{{ route('sectors.index') }}">Sectors We Serve</a>
                                                 </li>
-                                                <li @class(['current'=> $p_nam == 'clients'])>
-                                                    <a href="{{ route('clients') }}">Our Clients</a>
+                                                <li @class(['current'=> $p_nam == 'certificate'])>
+                                                    <a href="{{ route('certificate.index') }}">Certification</a>
                                                 </li>
                                                 <li @class(['current'=> $p_nam == 'team'])>
                                                     <a href="{{ route('team') }}">Our Team</a>

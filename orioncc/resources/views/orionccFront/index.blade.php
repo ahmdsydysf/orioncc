@@ -655,32 +655,6 @@ $p_nam = 'home';
 </section>
 <!--Hot Products Two End-->
 
-<!--Cta One Start-->
-<section class="cta-one">
-    <div class="cta-one__bg-img"
-        style="background-image: url({{ asset('orionFrontAssets/assets/images/shapes/OIU9I511-01-rotat-Copy.png') }});">
-    </div>
-    <div class="container">
-        <div class="cta-one__inner">
-            <div class="cta-one__img-1">
-                <img src="{{ asset('orionFrontAssets/assets/images/resources/Screenshot 2024-09-04 103337.png') }}"
-                    alt="">
-            </div>
-            <div class="cta-one__left">
-                <div class="cta-one__title-box">
-                    <span class="cta-one__tagline">Need Orion Help?</span>
-                    <h2 class="cta-one__title">We’re leader in Contracting of Constructions market</h2>
-                </div>
-            </div>
-            <div class="cta-one__right">
-                <div class="cta-one__btn-box">
-                    <a href="about.html" class="cta-one__btn thm-btn">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--Cta One End-->
 
 <!--Feature One End-->
 <!--Why Choose One Start-->
@@ -759,6 +733,185 @@ $p_nam = 'home';
             </section> -->
 <!--Why Choose One End-->
 <!--About One Start-->
+<section class="banner-one my-5">
+    <div class="container">
+        <div class="section-title text-center">
+            <span class="section-title__tagline">Our Certificate</span>
+            <h2 class="section-title__title">Orion
+                <br> Your Trusted Partener
+            </h2>
+        </div>
+        <div class="row">
+            <div class="thm-swiper__slider swiper-container" data-swiper-options='{"spaceBetween": 100,"slidesPerView": 3,"speed": 500, "autoplay": { "delay": 3000 },"loop":true, "breakpoints": {
+                "0": {
+                    "spaceBetween": 30,
+                    "slidesPerView": 1
+                },
+                "375": {
+                    "spaceBetween": 30,
+                    "slidesPerView": 1
+                },
+                "575": {
+                    "spaceBetween": 30,
+                    "slidesPerView": 1
+                },
+                "767": {
+                    "spaceBetween": 50,
+                    "slidesPerView": 2
+                },
+                "991": {
+                    "spaceBetween": 50,
+                    "slidesPerView": 2
+                },
+                "1199": {
+                    "spaceBetween": 100,
+                    "slidesPerView": 2
+                }
+            }}'>
+                <div class="swiper-wrapper">
+
+                    <div class="col-xl-6 col-lg-6 swiper-slide" data-wow-delay="100ms">
+                        <div class="banner-one__right wow" data-wow-delay="100ms" data-wow-duration="2500ms"
+                            style="visibility: visible; animation-duration: 2500ms; animation-delay: 100ms; animation-name: slideInRight;">
+                            <div class="banner-one__inner ">
+                                <div class="banner-one__img-2">
+                                    <img src="{{ asset('orionFrontAssets/assets/images/certificate/صورة3.png') }}"
+                                        alt="">
+                                </div>
+                                <div class="banner-one__shape-1">
+                                    <img src="{{ asset('orionFrontAssets/assets/images/shapes/banner-shape-4.png') }}"
+                                        alt="">
+                                </div>
+                                <div class="banner-one__shape-5">
+                                    <img src="{{ asset('orionFrontAssets/assets/images/shapes/banner-shape-5.png') }}"
+                                        alt="">
+                                </div>
+
+                                <p class="banner-one__tagline">OrionCC</p>
+                                <h3 class="banner-one__title">ISO 45001:2018
+                                    <br> WRG
+                                </h3>
+                                <div class="banner-one__btn-box">
+                                    <p class="banner-one__tagline">Health & Safety <br> Management system</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 swiper-slide" data-wow-delay="100ms">
+                        <div class="banner-one__right wow" data-wow-delay="100ms" data-wow-duration="2500ms"
+                            style="visibility: visible; animation-duration: 2500ms; animation-delay: 100ms; animation-name: slideInRight;">
+                            <div class="banner-one__inner banner-one__inner-2">
+                                <div class="banner-one__img-2">
+                                    <img src="{{ asset('orionFrontAssets/assets/images/certificate/صورة2.jpg') }}"
+                                        alt="">
+                                </div>
+                                <div class="banner-one__shape-1">
+                                    <img src="{{ asset('orionFrontAssets/assets/images/shapes/banner-shape-4.png') }}"
+                                        alt="">
+                                </div>
+                                <div class="banner-one__shape-5">
+                                    <img src="{{ asset('orionFrontAssets/assets/images/shapes/banner-shape-5.png') }}"
+                                        alt="">
+                                </div>
+
+                                <p class="banner-one__tagline">OrionCC</p>
+                                <h3 class="banner-one__title">Suadi Arabia
+                                    <br> Branch Certificate
+                                </h3>
+                                <div class="banner-one__btn-box">
+                                    <p class="banner-one__tagline">We offer professionalism <br>and workmanship</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 swiper-slide" data-wow-delay="100ms">
+                        <div class="banner-one__right wow" data-wow-delay="100ms" data-wow-duration="2500ms"
+                            style="visibility: visible; animation-duration: 2500ms; animation-delay: 100ms; animation-name: slideInRight;">
+                            <div class="banner-one__inner">
+                                <div class="banner-one__img-2">
+                                    <img src="{{ asset('orionFrontAssets/assets/images/certificate/صورة4.png') }}"
+                                        alt="">
+                                </div>
+                                <div class="banner-one__shape-1">
+                                    <img src="{{ asset('orionFrontAssets/assets/images/shapes/banner-shape-4.png') }}"
+                                        alt="">
+                                </div>
+                                <div class="banner-one__shape-5">
+                                    <img src="{{ asset('orionFrontAssets/assets/images/shapes/banner-shape-5.png') }}"
+                                        alt="">
+                                </div>
+
+                                <p class="banner-one__tagline">OrionCC</p>
+                                <h3 class="banner-one__title">ISO 14001:2015
+                                    <br> WRG
+                                </h3>
+                                <div class="banner-one__btn-box">
+                                    <p class="banner-one__tagline">Environment <br> management</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 swiper-slide" data-wow-delay="100ms">
+                        <div class="banner-one__left wow" data-wow-delay="100ms" data-wow-duration="2500ms"
+                            style="visibility: visible; animation-duration: 2500ms; animation-delay: 100ms; animation-name: slideInLeft;">
+                            <div class="banner-one__inner banner-one__inner-2">
+                                <div class="banner-one__img-2">
+                                    <img src="{{ asset('orionFrontAssets/assets/images/certificate/صورة1.png') }}"
+                                        alt="">
+                                </div>
+                                <div class="banner-one__shape-1">
+                                    <img src="{{ asset('orionFrontAssets/assets/images/shapes/banner-shape-4.png') }}"
+                                        alt="">
+                                </div>
+                                <div class="banner-one__shape-5">
+                                    <img src="{{ asset('orionFrontAssets/assets/images/shapes/banner-shape-5.png') }}"
+                                        alt="">
+                                </div>
+                                <p class="banner-one__tagline">OrionCC</p>
+                                <h3 class="banner-one__title">Commercial
+                                    <br> Licence
+                                </h3>
+                                <div class="banner-one__btn-box">
+                                    <p class="banner-one__tagline">We offer professionalism <br>and workmanship</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 swiper-slide" data-wow-delay="100ms">
+                        <div class="banner-one__right wow" data-wow-delay="100ms" data-wow-duration="2500ms"
+                            style="visibility: visible; animation-duration: 2500ms; animation-delay: 100ms; animation-name: slideInRight;">
+                            <div class="banner-one__inner ">
+                                <div class="banner-one__img-2">
+                                    <img src="{{ asset('orionFrontAssets/assets/images/certificate/صورة5.png') }}"
+                                        alt="">
+                                </div>
+                                <div class="banner-one__shape-1">
+                                    <img src="{{ asset('orionFrontAssets/assets/images/shapes/banner-shape-4.png') }}"
+                                        alt="">
+                                </div>
+                                <div class="banner-one__shape-5">
+                                    <img src="{{ asset('orionFrontAssets/assets/images/shapes/banner-shape-5.png') }}"
+                                        alt="">
+                                </div>
+
+                                <p class="banner-one__tagline">OrionCC</p>
+                                <h3 class="banner-one__title">ISO 9001:2015
+                                    <br> WRG
+                                </h3>
+                                <div class="banner-one__btn-box">
+                                    <p class="banner-one__tagline">Quality <br>management </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-one__btn-box offset-5">
+                <a href="{{ route('certificate.index') }}" class="testimonial-one__btn thm-btn">View all
+                    Certifications</a>
+            </div>
+        </div>
+</section>
 <section class="about-one">
     <div class="about-one__shape-11 float-bob-y">
         <img src="{{ asset('orionFrontAssets/assets/images/shapes/shapes2-01.png') }}" alt="">
@@ -1037,6 +1190,33 @@ $p_nam = 'home';
     </div>
 
 </section>
+<!--Cta One Start-->
+<section class="cta-one">
+    <div class="cta-one__bg-img"
+        style="background-image: url({{ asset('orionFrontAssets/assets/images/shapes/OIU9I511-01-rotat-Copy.png') }});">
+    </div>
+    <div class="container">
+        <div class="cta-one__inner">
+            <div class="cta-one__img-1">
+                <img src="{{ asset('orionFrontAssets/assets/images/resources/Screenshot 2024-09-04 103337.png') }}"
+                    alt="">
+            </div>
+            <div class="cta-one__left">
+                <div class="cta-one__title-box">
+                    <span class="cta-one__tagline">Need Orion Help?</span>
+                    <h2 class="cta-one__title">We’re leader in Contracting of Constructions market</h2>
+                </div>
+            </div>
+            <div class="cta-one__right">
+                <div class="cta-one__btn-box">
+                    <a href="about.html" class="cta-one__btn thm-btn">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Cta One End-->
+
 <!--Categories One End-->
 <section class="testimonial-two">
     <div class="testimonial-two__bg"
@@ -1206,6 +1386,8 @@ $p_nam = 'home';
     </div>
 
 </section>
+
+
 <!--Gallery Three Start-->
 <section class="gallery-three">
     <div class="container">

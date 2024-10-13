@@ -90,7 +90,7 @@ $p_nam = 'sectors';
                 <li><span>/</span></li>
                 <li>All Sectors</li>
             </ul>
-            <h2>Sectors We Serve</h2>
+            <h2 class="fnt-clr-g">Sectors We Serve</h2>
         </div>
     </div>
 </section>

@@ -52,9 +52,9 @@ $p_nam = 'projects';
     <div class="container">
         <div class="page-header__inner">
             <ul class="thm-breadcrumb list-unstyled">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="{{ route('home') }}">Home</a></li>
                 <li><span>/</span></li>
-                <li><a href="projects.html">Projects</a></li>
+                <li><a href="{{ route('projects.index') }}">Projects</a></li>
             </ul>
             <h2 class="fnt-clr-g">Rakez Industrial</h2>
         </div>

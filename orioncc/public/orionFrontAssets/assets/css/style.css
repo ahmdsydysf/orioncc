@@ -3875,11 +3875,23 @@ ul {
 .banner-one__inner-2 {
     background-color: var(--ogenix-base);
 }
+.banner-one__inner-22 {
+    background-color: #8e4700;
+}
+.banner-one__inner-23 {
+    background-color: #008e15;
+}
+.banner-one__inner-24 {
+    background-color: #8e1800;
+}
+.banner-one__inner-25 {
+    background-color: var(--ogenix-base);
+}
 
 .banner-one__img-2 {
     position: absolute;
-    top: -10px;
-    right: -16px;
+    top: -2px;
+    left: 45%;
 }
 
 .banner-one__img-2 img {
@@ -11866,7 +11878,7 @@ ul {
 
 .product__menu-icon-one.active,
 .product__menu-icon-two.active {
-    color:var(--ogenix-black)
+    color: var(--ogenix-black);
 }
 
 .product__menu-icon-one:hover {
@@ -16973,7 +16985,15 @@ canvas {
 .fnt-clr-g {
     color: #aef490 !important;
 }
-
+.fnt-clr-sb {
+    color: #00738e !important;
+}
+.f-w-900 {
+    font-weight: 900 !important;
+}
+.f-w-600 {
+    font-weight: 600 !important;
+}
 .fnt-clr-w {
     color: #e1e7df;
 }

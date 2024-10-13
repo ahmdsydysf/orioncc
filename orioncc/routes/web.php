@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\MainHomePageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
@@ -7,8 +8,8 @@ use App\Http\Controllers\SectorController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [MainHomePageController::class , 'index'])->name('home');
-
 Route::resource('projects' , ProjectController::class);
+Route::resource('certificate' , CertificateController::class );
 Route::resource('sectors' , SectorController::class);
 Route::get('/projects-list', [ProjectController::class , 'indexOfList'])->name('indexOfList');
 
