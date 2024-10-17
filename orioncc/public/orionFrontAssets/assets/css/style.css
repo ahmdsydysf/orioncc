@@ -17057,3 +17057,11 @@ canvas {
     img {
     min-height: 260px !important;
 }
+
+.w-250 {
+    width: 250px !important;
+}
+.product__menu-showing-sort .product__menu .icon-menu,
+.product__menu-showing-sort .product__menu .icon-list {
+    font-size: xx-large;
+}

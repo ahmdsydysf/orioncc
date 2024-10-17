@@ -3,7 +3,12 @@
 $p_nam = 'projects';
 @endphp
 @section('page_name' , 'Orion Projects')
-
+@section('pageLoader')
+<div class="preloader">
+    <div class="preloader__image"></div>
+</div>
+<!-- /.preloader -->
+@endsection
 @section('css_style_links')
 <link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/vendors/bootstrap/css/bootstrap.min.css') }}" />
 <link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/vendors/animate/animate.min.css') }}" />
@@ -49,11 +54,11 @@ $p_nam = 'projects';
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="product__showing-result">
-                                <div class="shop-search product__sidebar-single">
+                                {{-- <div class="shop-search product__sidebar-single">
                                     <form action="#">
                                         <input type="text" placeholder="Search">
                                     </form>
-                                </div>
+                                </div> --}}
                                 <div class="product__menu-showing-sort">
                                     <div class="product__menu">
                                         <a href="{{ route('projects.index', ['page' => $page]) }}"
@@ -61,7 +66,7 @@ $p_nam = 'projects';
                                         <a href="{{ route('indexOfList', ['page' => $page]) }}"
                                             class="product__menu-icon-two active"><span class="icon-list"></span></a>
                                     </div>
-                                    <div class="product__showing-sort">
+                                    {{-- <div class="product__showing-sort">
                                         <div class="select-box">
                                             <select class="wide">
                                                 <option data-display="Sort by popular">Sort by Newest</option>
@@ -70,7 +75,7 @@ $p_nam = 'projects';
                                                 <option value="3">Sort by Category 2</option>
                                             </select>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
@@ -83,7 +88,7 @@ $p_nam = 'projects';
                                 <div class="product-list__single-inner">
                                     <div class="product-list__img-box">
                                         <div class="product-list__img">
-                                            <img src="{{ asset('orionFrontAssets/assets/images/project/'.$data->name.'/'.$data->main_image) }}"
+                                            <img src="{{ asset('orionFrontAssets/assets/images/project/'.$data->slug_name.'/'.$data->main_image) }}"
                                                 alt="">
                                         </div>
 

@@ -12,6 +12,9 @@ Route::resource('projects' , ProjectController::class);
 Route::resource('certificate' , CertificateController::class );
 Route::resource('sectors' , SectorController::class);
 Route::get('/projects-list', [ProjectController::class , 'indexOfList'])->name('indexOfList');
+Route::get('/contact', function(){
+    return view('orionccFront.contact');
+})->name('contact');
 
 // Route::get('/our-projects', function () {
 //     return view('orionccFront.projects');
@@ -33,9 +36,9 @@ Route::get('/about-us', function () {
     return view('orionccFront.about');
 })->name('about');
 
-Route::get('/contact-us', function () {
-    return view('orionccFront.contact');
-})->name('contact');
+// Route::get('/contact-us', function () {
+//     return view('orionccFront.contact');
+// })->name('contact');
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Sector;
 use App\Models\Project;
 use Illuminate\Http\Request;
 
@@ -32,7 +33,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        $data = Project::all(['id' , 'name']);
+        return view('orionccFront.create_project',compact('data'));
     }
 
     /**
@@ -40,7 +42,14 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $project = Project::findOrFail($request->project_id);
+        if ($request->hasFile('pro_images')) {
+            $project->addMultipleMediaFromRequest(['pro_images'])
+                ->each(function ($fileAdder) use ($request) {
+                    $fileAdder->withResponsiveImages()->toMediaCollection($request->project_collection);
+                });
+        }
+        return redirect()->back()->with('success', 'Images uploaded successfully.');
     }
 
     /**
@@ -48,7 +57,14 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        return view('orionccFront.project-details',['project' => $project]);
+        $suggested_projects = Project::where('sector_id', $project->sector_id)
+        ->where('id', '!=', $project->id)
+        ->with('Client')
+        ->inRandomOrder()
+        ->limit(3)
+        ->get(['id', 'main_image', 'name', 'slug_name', 'client_id']);
+
+        return view('orionccFront.project-details',['project' => $project , 'sug_proj'=>$suggested_projects]);
     }
 
     /**

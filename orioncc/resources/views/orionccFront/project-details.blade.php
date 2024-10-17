@@ -2,53 +2,159 @@
 @php
 $p_nam = 'projects';
 @endphp
-@section('page_name' ,)
-
-@section('js-para-index')
+@section('page_name' , $project->name )
+@section('pageLoader')
+<div class="preloader">
+    <div class="preloader__image"></div>
+</div>
+<!-- /.preloader -->
+@endsection
+@section('css_style_links')
+<link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/vendors/bootstrap/css/bootstrap.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/vendors/animate/animate.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/vendors/animate/custom-animate.css') }}" />
+<link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/vendors/fontawesome/css/all.min.css') }}" />
+<!-- used in popup video -->
+<link rel="stylesheet"
+    href="{{ asset('orionFrontAssets/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css') }}" />
+<!-- used on mobile for slider -->
+<link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/vendors/nouislider/nouislider.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/vendors/nouislider/nouislider.pips.css') }}" />
+<link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/vendors/odometer/odometer.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/vendors/swiper/swiper.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/vendors/ogenix-icons/style.css') }}">
+<link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/vendors/tiny-slider/tiny-slider.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/vendors/reey-font/stylesheet.css') }}" />
+<link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/vendors/owl-carousel/owl.carousel.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/vendors/owl-carousel/owl.theme.default.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/vendors/bxslider/jquery.bxslider.css') }}" />
+@if ($p_nam == 'projects')
+<link rel="stylesheet"
+    href="{{ asset('orionFrontAssets/assets/vendors/bootstrap-select/css/bootstrap-select.min.css') }}" />
+@endif
+<link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/vendors/vegas/vegas.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/vendors/jquery-ui/jquery-ui.css') }}" />
+<link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/vendors/timepicker/timePicker.css') }}" />
+@if ($p_nam == 'projects')
+<link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/vendors/nice-select/nice-select.css') }}" />
+@endif
+<!-- template styles -->
+<link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/css/packages.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/vendors/bootstrap/css/bootstrap.min.css') }}" />
+<link href="https://cdn.jsdelivr.net/npm/lightgallery@2.3.0/css/lightgallery.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/js/flip/jquery.flipster.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/css/style.css') }}" />
+@endsection
+@section('cust_js')
+<script src="{{ asset('orionFrontAssets/assets/vendors/jquery/jquery-3.6.0.min.js') }}"></script>
+<script src="{{ asset('orionFrontAssets/assets/vendors/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('orionFrontAssets/assets/vendors/jarallax/jarallax.min.js') }}"></script>
+<script src="{{ asset('orionFrontAssets/assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js') }}"></script>
+<script src="{{ asset('orionFrontAssets/assets/vendors/jquery-appear/jquery.appear.min.js') }}"></script>
+<script src="{{ asset('orionFrontAssets/assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js') }}">
+</script>
+<script src="{{ asset('orionFrontAssets/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js') }}">
+</script>
+<script src="{{ asset('orionFrontAssets/assets/vendors/jquery-validate/jquery.validate.min.js') }}"></script>
+<script src="{{ asset('orionFrontAssets/assets/vendors/nouislider/nouislider.min.js') }}"></script>
+<script src="{{ asset('orionFrontAssets/assets/vendors/odometer/odometer.min.js') }}"></script>
+<script src="{{ asset('orionFrontAssets/assets/vendors/swiper/swiper.min.js') }}"></script>
+<script src="{{ asset('orionFrontAssets/assets/vendors/tiny-slider/tiny-slider.min.js') }}"></script>
+<script src="{{ asset('orionFrontAssets/assets/vendors/wnumb/wNumb.min.js') }}"></script>
+<!-- related with loader -->
+<script src="{{ asset('orionFrontAssets/assets/vendors/wow/wow.js') }}"></script>
+<script src="{{ asset('orionFrontAssets/assets/vendors/isotope/isotope.js') }}"></script>
+<script src="{{ asset('orionFrontAssets/assets/vendors/countdown/jquery.countdown.min.js') }}"></script>
+<script src="{{ asset('orionFrontAssets/assets/vendors/owl-carousel/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('orionFrontAssets/assets/vendors/bxslider/jquery.bxslider.min.js') }}"></script>
+<script src="{{ asset('orionFrontAssets/assets/vendors/bootstrap-select/js/bootstrap-select.min.js') }}"></script>
+<script src="{{ asset('orionFrontAssets/assets/vendors/vegas/vegas.min.js') }}"></script>
+<script src="{{ asset('orionFrontAssets/assets/vendors/jquery-ui/jquery-ui.js') }}"></script>
+<script src="{{ asset('orionFrontAssets/assets/vendors/timepicker/timePicker.js') }}"></script>
+<script src="{{ asset('orionFrontAssets/assets/vendors/circleType/jquery.circleType.js') }}"></script>
+<script src="{{ asset('orionFrontAssets/assets/vendors/circleType/jquery.lettering.min.js') }}"></script>
+<script src="{{ asset('orionFrontAssets/assets/vendors/nice-select/jquery.nice-select.min.js') }}"></script>
+<!-- template js -->
+<script src="{{ asset('orionFrontAssets/assets/js/flip/jquery.flipster.min.js') }}"></script>
+<!-- template js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.3.0/lightgallery.min.js"
+    integrity="sha512-+1CyleTPoFvPO15/CfBZ5h6k/mu/qCQe9uxq1tEfO7SRJ52MnCAQ561bAYkvrsGtnG7AkcvKtVwdeoZc8ps7bQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
-@endsection
-@section('js-video-index')
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Create the video element
-        var video = document.createElement('video');
-
-        // Set video attributes
-        video.setAttribute('muted', 'muted');
-        video.setAttribute('loop', 'loop');
-        video.setAttribute('autoplay', 'autoplay');
-        video.setAttribute('playsInline', 'playsInline');
-        video.setAttribute('id', 'background-video');
-        video.setAttribute('poster', {{ asset('orionFrontAssets/assets/video/video-screen.png') }});
-        // Add poster attribute
-
-        // Create the source element
-        var source = document.createElement('source');
-        source.src = {{ asset('orionFrontAssets/assets/video/0903.mp4') }};
-        source.type = "video/mp4";
-
-        // Append the source to the video
-        video.appendChild(source);
-
-        // Append the video to the container
-        document.getElementById('hero-slider-sect').prepend(video);
-        video.play();
-        // Optional: Play the video if autoPlay doesn't work (e.g., due to browser policies)
-        document.body.addEventListener('click', function () {
-            video.play()
-                .then(() => console.log("Video playback started successfully"))
-                .catch(error => console.error("Error trying to play the video:", error));
-        }, { once: true }); // The { once: true } option auto-removes the event listener after one use
+    $(document).ready(function () {
+      // Initialize LightGallery
+      var lightGalleryInstance = lightGallery(document.getElementById('customize-thumbnails-gallery'), {
+        selector: 'a',
+        addClass: 'lg-custom-thumbnails',
+        appendThumbnailsTo: '.lg-outer',
+        animateThumb: true,
+        allowMediaOverlap: true,
+        speed: 500,
+        closeOnTap: true,
+        hideBarsDelay: 3000,
+        loop: true,
+        download: false,
+        counter: true,
+        enableSwipe: true,
+        enableDrag: true,
+        swipeThreshold: 50,
+        thumbnail: true,
+        animateThumb: true,
+        currentPagerPosition: 'middle',
+        thumbWidth: 100,
+        thumbHeight: '80px',
+        thumbContHeight: 100,
+        showThumbByDefault: true,
+        toogleThumb: true,
+        fullScreen: true,
+        zoom: true,
+        scale: 1,
+        actualSize: true
+      });
+      // Initialize Flipster
+      var flipsterInstance = $("#customize-thumbnails-gallery").flipster({
+        itemContainer: 'ul',
+        itemSelector: 'li',
+        style: 'coverflow',
+        responsive: true,
+        start: 'center',
+        loop: false,
+        spacing: -0.2,
+        visible: 4,
+        perspective: 1000,
+        autoplay: false,
+        pauseOnHover: false,
+        click: false,
+        keyboard: true,
+        scrollwheel: true,
+        touch: true,
+        nav: false,
+        buttons: false,
+        buttonPrev: 'Previous',
+        buttonNext: 'next',
+        onItemSwitch: $.noop
+      });
+      // Add click event to Flipster items to trigger LightGallery
+      $('.flipster__item').on('click', function (e) {
+        e.preventDefault();
+        var index = $(this).index();
+        lightGalleryInstance.openGallery(index);
+      });
     });
 </script>
+<script src="{{ asset('orionFrontAssets/assets/js/main.js') }}"></script>
 @endsection
+@section('page_content')
 <!--Page Header Start-->
 <section class="page-header">
-    <div class="page-header-bg" style="background-image: url(assets/images/resources/project-up-back.webp)">
+    <div class="page-header-bg"
+        style="background-image: url({{ asset('orionFrontAssets/assets/images/resources/project-up-back.webp') }})">
     </div>
     <div class="page-header__ripped-paper"
-        style="background-image: url(assets/images/shapes/page-header-ripped-paper.png);"></div>
+        style="background-image: url({{ asset('orionFrontAssets/assets/images/shapes/page-header-ripped-paper.png') }});">
+    </div>
     <div class="container">
         <div class="page-header__inner">
             <ul class="thm-breadcrumb list-unstyled">
@@ -56,7 +162,7 @@ $p_nam = 'projects';
                 <li><span>/</span></li>
                 <li><a href="{{ route('projects.index') }}">Projects</a></li>
             </ul>
-            <h2 class="fnt-clr-g">Rakez Industrial</h2>
+            <h2 class="fnt-clr-g">{{ $project->name }}</h2>
         </div>
     </div>
 </section>
@@ -69,12 +175,13 @@ $p_nam = 'projects';
                 <div class="col-xl-12">
                     <div class="section-title text-center">
                         <span class="section-title__tagline">Checkout Our Project</span>
-                        <h2 class="section-title__title">Rakez Industrial
-                            <br> Rakez Project
+                        <h2 class="section-title__title">{{ $project->name }}
+                            <br> {{ $project->Client->name }}
                         </h2>
                     </div>
                     <div class="portfolio-details__img">
-                        <img src="assets/images/project/rakez/1/Project_20230209_0006.jpg" alt="">
+                        <img src="{{ asset('orionFrontAssets/assets/images/project/'.$project->slug_name . '/' . $project->main_image) }}"
+                            alt="">
                     </div>
                 </div>
             </div>
@@ -84,18 +191,8 @@ $p_nam = 'projects';
                 <div class="col-xl-8 col-lg-7">
                     <div class="portfolio-details__left">
                         <h3 class="portfolio-details__title">About our project</h3>
-                        <p class="portfolio-details__text-1">Tincidunt elit magnis nulla facilisis sagittis
-                            sapien nunc amet ultrices dolores sit ipsum velit purus aliquet massa fringilla leo
-                            orci. Sapien nunc amet ultrices, dolores sit ipsum velit massa fringilla leo orci
-                            dolors sit amet elit amet.</p>
-                        <p class="portfolio-details__text-2">It is a long established fact that a reader will be
-                            distracted by the readable content of a page when looking at its layout. The point
-                            of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                            as opposed to using 'Content here, content here', making it look like readable
-                            English. Many desktop publishing packages and web page editors now use Lorem Ipsum
-                            as their default model text, and a search for 'lorem ipsum' will uncover many web
-                            sites still in their infancy. Various versions have evolved over the years,
-                            sometimes by accident, humour and the like.</p>
+                        <p class="portfolio-details__text-1">{{ $project->mini_desc }}</p>
+                        <p class="portfolio-details__text-2">{{ $project->full_desc }}</p>
                         <ul class="portfolio-details__points-box list-unstyled">
                             <li>
                                 <div class="icon">
@@ -131,15 +228,30 @@ $p_nam = 'projects';
                         <ul class="list-unstyled portfolio-details__details-list">
                             <li>
                                 <p class="portfolio-details__client">Client:</p>
-                                <h4 class="portfolio-details__name">Rakez</h4>
+                                <h4 class="portfolio-details__name">{{ $project->Client->name }}</h4>
+                            </li>
+                            <li>
+                                <p class="portfolio-details__client">Consultant:</p>
+                                <h4 class="portfolio-details__name">{{ $project->consultant }}</h4>
                             </li>
                             <li>
                                 <p class="portfolio-details__client">Category:</p>
-                                <h4 class="portfolio-details__name">Industrial</h4>
+                                <h4 class="portfolio-details__name">{{ $project->Sector->name }}</h4>
                             </li>
                             <li>
-                                <p class="portfolio-details__client">Done In:</p>
-                                <h4 class="portfolio-details__name">9 Months</h4>
+                                <p class="portfolio-details__client">Cost:</p>
+                                <h4 class="portfolio-details__name">{{ $project->cost }}</h4>
+                            </li>
+                            <li>
+                                <p class="portfolio-details__client">Start:</p>
+                                <h4 class="portfolio-details__name">{{
+                                    \Carbon\Carbon::parse($project->start)->format('Y-m-d') }}</h4>
+                            </li>
+                            <li>
+                                <p class="portfolio-details__client">End:</p>
+                                <h4 class="portfolio-details__name">{{
+                                    \Carbon\Carbon::parse($project->end)->format('Y-m-d') }}
+                                </h4>
                             </li>
                         </ul>
 
@@ -152,11 +264,12 @@ $p_nam = 'projects';
 <div class="container-fluid">
     <section class="testimonial-two" style="padding: 50px 0 50px;">
         <div class="testimonial-two__bg"
-            style="background-image: url(assets/images/backgrounds/testimonial-two-bg.jpg);"></div>
-        <div class="testimonial-two__bg-img"
-            style="background-image: url(assets/images/backgrounds/testimonial-two-bg-img.png);"></div>
+            style="background-image: url({{ asset('orionFrontAssets/assets/images/backgrounds/testimonial-two-bg.jpg') }});">
+        </div>
+        <div class="testimonial-two__bg-img">
+        </div>
         <div class="testimonial-two__shape-1">
-            <img src="assets/images/shapes/testimonial-two-shape-1.png" alt="">
+
         </div>
         <div class="container">
             <div class="row">
@@ -166,126 +279,41 @@ $p_nam = 'projects';
                             <span class="section-title__tagline">Our project Gallary</span>
                             <h2 class="section-title__title">It's Good To Share Our Work With You</h2>
                         </div>
-                        <p class="testimonial-two__text-1">Lorem ipsum dolor sit amet, elit sed, ading do eiusmod
-                            tempor incididunt labore et dolore elit, sed do eiusmod.</p>
+                        <p class="testimonial-two__text-1">{{ $project->mini_desc }}</p>
                     </div>
                 </div>
                 <div class="col-xl-8">
-                    <div class="testimonial-two__right">
-                        <div class="main-slider-three__right">
-                            <div class="swiper-container thm-swiper__slider" data-swiper-options='{"slidesPerView": 1, "loop": true,
-                      "effect": "fade",
-                      "pagination": {
-                      "el": "#main-slider-pagination",
-                      "type": "bullets",
-                      "clickable": true
-                      },
-                      "navigation": {
-                      "nextEl": "#main-slider__swiper-button-next",
-                      "prevEl": "#main-slider__swiper-button-prev"
-                      },
-                      "autoplay": {
-                      "delay": 5000
-                      }}'>
+                    <div class="testimonial-two__right" style="min-height: 410px;max-height:410px">
+                        <div class="main-slider-three__right" style="min-height: 410px;max-height:410px">
+                            <div class="swiper-container thm-swiper__slider" style="min-height: 410px;max-height:410px"
+                                data-swiper-options='{"slidesPerView": 1, "loop": true,
+                                "effect": "cube",
+                                "pagination": {
+                                "el": "#main-slider-pagination",
+                                "type": "bullets",
+                                "clickable": true
+                                },
+                                "navigation": {
+                                "nextEl": "#main-slider__swiper-button-next",
+                                "prevEl": "#main-slider__swiper-button-prev"
+                                },
+                                "autoplay": {
+                                "delay": 5000
+                                }}'>
                                 <div class="swiper-wrapper">
-
+                                    @foreach ( $project->getMedia("mini_gallary") as $media )
                                     <div class="swiper-slide">
-                                        <div class="image-layer-three">
-                                            <img src="assets/images/project/rakez/1/Project_20230209_0007.jpg" alt="">
+                                        <div class="">
+                                            <img src="{{ $media->getFullUrl() }}" alt=""
+                                                style="width:100%;height:410px">
                                         </div>
-                                        <div class="main-slider-three__bg-shape-1"
-                                            style="background-image: url(assets/images/shapes/main-slider-three-bg-shape-1.jpg);">
-                                        </div>
-                                        <div class="main-slider-three__content">
-                                            <h4 class="main-slider-three__sub-title">
-                                            </h4>
-                                            <h2 class="main-slider-three__title">
-                                            </h2>
-                                            <div class="main-slider-three__btn-box">
-                                                <a href="product-details.html"
-                                                    class="thm-btn main-slider-three__btn"></a>
-                                            </div>
-                                        </div>
+
                                     </div>
 
-                                    <div class="swiper-slide">
-                                        <div class="image-layer-three image-layer-three--2">
-                                            <img src="assets/images/project/rakez/1/Project_20230209_0012.jpg" alt="">
-                                        </div>
-                                        <div class="main-slider-three__bg-shape-1"
-                                            style="background-image: url(assets/images/shapes/main-slider-three-bg-shape-1.jpg);">
-                                        </div>
-                                        <div class="main-slider-three__content">
-                                            <h4 class="main-slider-three__sub-title">
-                                            </h4>
-                                            <h2 class="main-slider-three__title">
-                                            </h2>
-                                            <div class="main-slider-three__btn-box">
-                                                <a href="product-details.html"
-                                                    class="thm-btn main-slider-three__btn"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="image-layer-three image-layer-three--3">
-                                            <img src="assets/images/project/rakez/1/Project_20230209_0014.jpg" alt="">
-                                        </div>
-                                        <div class="main-slider-three__bg-shape-1"
-                                            style="background-image: url(assets/images/shapes/main-slider-three-bg-shape-1.jpg);">
-                                        </div>
-                                        <div class="main-slider-three__content">
-                                            <h4 class="main-slider-three__sub-title">
-                                            </h4>
-                                            <h2 class="main-slider-three__title">
-                                            </h2>
-                                            <div class="main-slider-three__btn-box">
-                                                <a href="product-details.html"
-                                                    class="thm-btn main-slider-three__btn"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="image-layer-three image-layer-three--3">
-                                            <img src="assets/images/project/rakez/1/Project_20230209_0015.jpg" alt="">
-                                        </div>
-                                        <div class="main-slider-three__bg-shape-1"
-                                            style="background-image: url(assets/images/shapes/main-slider-three-bg-shape-1.jpg);">
-                                        </div>
-                                        <div class="main-slider-three__content">
-                                            <h4 class="main-slider-three__sub-title">
-                                            </h4>
-                                            <h2 class="main-slider-three__title">
-                                            </h2>
-                                            <div class="main-slider-three__btn-box">
-                                                <a href="product-details.html"
-                                                    class="thm-btn main-slider-three__btn"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="image-layer-three image-layer-three--3">
-                                            <img src="assets/images/project/rakez/1/Project_20230209_0026.jpg" alt="">
-                                        </div>
-                                        <div class="main-slider-three__bg-shape-1"
-                                            style="background-image: url(assets/images/shapes/main-slider-three-bg-shape-1.jpg);">
-                                        </div>
-                                        <div class="main-slider-three__content">
-                                            <h4 class="main-slider-three__sub-title">
-                                            </h4>
-                                            <h2 class="main-slider-three__title">
-                                            </h2>
-                                            <div class="main-slider-three__btn-box">
-                                                <a href="product-details.html"
-                                                    class="thm-btn main-slider-three__btn"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                    @endforeach
                                 </div>
-
                                 <!-- If we need navigation buttons -->
-                                <div class="swiper-pagination" id="main-slider-pagination"></div>
+                                {{-- <div class="swiper-pagination" id="main-slider-pagination"></div> --}}
 
                             </div>
                         </div>
@@ -298,105 +326,21 @@ $p_nam = 'projects';
 </div>
 <div class="container" style="margin-top: 120px;">
     <div id="customize-thumbnails-gallery">
-
         <ul class="flip-items enhanced-reflection">
-            <li data-flip-title="Title 1">
-                <a class="flipster__item" href="assets/images/project/rakez/1/Project_20230209_0001.jpg">
-                    <img src="assets/images/project/rakez/1/Project_20230209_0001.jpg" />
+            @foreach ( $project->getMedia("flipster") as $media )
+            <li data-flip-title="Title {{ $loop->index + 1 }}">
+                <a class="flipster__item" href="{{ $media->getFullUrl() }}">
+                    <img src="{{ $media->getFullUrl() }}" />
                 </a>
             </li>
-            <li data-flip-title="Title 2">
-                <a class="flipster__item" href="assets/images/project/rakez/1/Project_20230209_0002.jpg">
-                    <img src="assets/images/project/rakez/1/Project_20230209_0002.jpg" />
-                </a>
-            </li>
-            <li data-flip-title="Title 3">
-                <a class="flipster__item" href="assets/images/project/rakez/1/Project_20230209_0003.jpg">
-                    <img src="assets/images/project/rakez/1/Project_20230209_0003.jpg" />
-                </a>
-            </li>
-            <li data-flip-title="Title 3">
-                <a class="flipster__item" href="assets/images/project/rakez/1/Project_20230209_0004.jpg">
-                    <img src="assets/images/project/rakez/1/Project_20230209_0004.jpg" />
-                </a>
-            </li>
-            <li data-flip-title="Title 3">
-                <a class="flipster__item" href="assets/images/project/rakez/1/Project_20230209_0005.jpg">
-                    <img src="assets/images/project/rakez/1/Project_20230209_0005.jpg" />
-                </a>
-            </li>
-            <li data-flip-title="Title 3">
-                <a class="flipster__item" href="assets/images/project/rakez/1/Project_20230209_0006.jpg">
-                    <img src="assets/images/project/rakez/1/Project_20230209_0006.jpg" />
-                </a>
-            </li>
-            <li data-flip-title="Title 3">
-                <a class="flipster__item" href="assets/images/project/rakez/1/Project_20230209_0007.jpg">
-                    <img src="assets/images/project/rakez/1/Project_20230209_0007.jpg" />
-                </a>
-            </li>
-            <li data-flip-title="Title 3">
-                <a class="flipster__item" href="assets/images/project/rakez/1/Project_20230209_0008.jpg">
-                    <img src="assets/images/project/rakez/1/Project_20230209_0008.jpg" />
-                </a>
-            </li>
-            <li data-flip-title="Title 3">
-                <a class="flipster__item" href="assets/images/project/rakez/1/Project_20230209_0009.jpg">
-                    <img src="assets/images/project/rakez/1/Project_20230209_0009.jpg" />
-                </a>
-            </li>
-            <li data-flip-title="Title 3">
-                <a class="flipster__item" href="assets/images/project/rakez/1/Project_20230209_0010.jpg">
-                    <img src="assets/images/project/rakez/1/Project_20230209_0010.jpg" />
-                </a>
-            </li>
-            <li data-flip-title="Title 3">
-                <a class="flipster__item" href="assets/images/project/rakez/1/Project_20230209_0011.jpg">
-                    <img src="assets/images/project/rakez/1/Project_20230209_0011.jpg" />
-                </a>
-            </li>
-            <li data-flip-title="Title 3">
-                <a class="flipster__item" href="assets/images/project/rakez/1/Project_20230209_0012.jpg">
-                    <img src="assets/images/project/rakez/1/Project_20230209_0012.jpg" />
-                </a>
-            </li>
-            <li data-flip-title="Title 3">
-                <a class="flipster__item" href="assets/images/project/rakez/1/Project_20230209_0013.jpg">
-                    <img src="assets/images/project/rakez/1/Project_20230209_0013.jpg" />
-                </a>
-            </li>
-            <li data-flip-title="Title 3">
-                <a class="flipster__item" href="assets/images/project/rakez/1/Project_20230209_0014.jpg">
-                    <img src="assets/images/project/rakez/1/Project_20230209_0014.jpg" />
-                </a>
-            </li>
-            <li data-flip-title="Title 3">
-                <a class="flipster__item" href="assets/images/project/rakez/1/Project_20230209_0015.jpg">
-                    <img src="assets/images/project/rakez/1/Project_20230209_0015.jpg" />
-                </a>
-            </li>
-            <li data-flip-title="Title 3">
-                <a class="flipster__item" href="assets/images/project/rakez/1/Project_20230209_0016.jpg">
-                    <img src="assets/images/project/rakez/1/Project_20230209_0016.jpg" />
-                </a>
-            </li>
-            <li data-flip-title="Title 3">
-                <a class="flipster__item" href="assets/images/project/rakez/1/Project_20230209_0017.jpg">
-                    <img src="assets/images/project/rakez/1/Project_20230209_0017.jpg" />
-                </a>
-            </li>
-            <li data-flip-title="Title 3">
-                <a class="flipster__item" href="assets/images/project/rakez/1/Project_20230209_0018.jpg">
-                    <img src="assets/images/project/rakez/1/Project_20230209_0018.jpg" />
-                </a>
-            </li>
+            @endforeach
         </ul>
     </div>
 
 </div>
 <!--Counter One Start-->
 <section class="counter-one">
-    <div class="counter-one__bg" style="background-image: url(assets/images/backgrounds/OIU9IB1-01.png);background-size: auto;
+    <div class="counter-one__bg" style="background-image: url({{ asset('orionFrontAssets/assets/images/backgrounds/OIU9IB1-01.png') }});background-size: auto;
     background-repeat: repeat;">
     </div>
     <div class="container">
@@ -404,8 +348,8 @@ $p_nam = 'projects';
             <li class="counter-one__single">
                 <div class="counter-one__icon">
                     <img class="icon-farmer-1"
-                        src="assets/images/icon/completed-checkmark-done-complete-svgrepo-com.svg" width="60"
-                        height="60" alt="">
+                        src="{{ asset('orionFrontAssets/assets/images/icon/completed-checkmark-done-complete-svgrepo-com.svg') }}"
+                        width="60" height="60" alt="">
                 </div>
                 <div class="counter-one__content count-box">
                     <h3 class="count-text" data-stop="154" data-speed="1500">00</h3>
@@ -414,8 +358,9 @@ $p_nam = 'projects';
             </li>
             <li class="counter-one__single">
                 <div class="counter-one__icon">
-                    <img class="icon-farmer-1" src="assets/images/icon/engineer-worker-svgrepo-com.svg" width="60"
-                        height="60" alt="">
+                    <img class="icon-farmer-1"
+                        src="{{ asset('orionFrontAssets/assets/images/icon/engineer-worker-svgrepo-com.svg') }}"
+                        width="60" height="60" alt="">
                 </div>
                 <div class="counter-one__content count-box">
                     <h3 class="count-text" data-stop="163" data-speed="1500">00</h3>
@@ -424,7 +369,8 @@ $p_nam = 'projects';
             </li>
             <li class="counter-one__single">
                 <div class="counter-one__icon">
-                    <img src="assets/images/icon/worker-svgrepo-com.svg" width="60" height="60" alt="" srcset="">
+                    <img src="{{ asset('orionFrontAssets/assets/images/icon/worker-svgrepo-com.svg') }}" width="60"
+                        height="60" alt="" srcset="">
                 </div>
                 <div class="counter-one__content count-box">
                     <h3 class="count-text" data-stop="2384" data-speed="1500">00</h3>
@@ -433,7 +379,8 @@ $p_nam = 'projects';
             </li>
             <li class="counter-one__single">
                 <div class="counter-one__icon">
-                    <img src="assets/images/icon/deal-svgrepo-com.svg" width="65" height="65" alt="" srcset="">
+                    <img src="{{ asset('orionFrontAssets/assets/images/icon/deal-svgrepo-com.svg') }}" width="65"
+                        height="65" alt="" srcset="">
 
                 </div>
                 <div class="counter-one__content count-box">
@@ -448,7 +395,8 @@ $p_nam = 'projects';
 <!--Video One Start-->
 <section class="video-one">
     <div class="video-one-bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
-        style="background-image: url(assets/images/project/rakez/1/Project_20230209_0004.jpg)"></div>
+        style="background-image: url({{ asset('orionFrontAssets/assets/images/project/'.$project->slug_name . '/' . $project->main_image) }})">
+    </div>
     <div class="video-one-border"></div>
     <div class="video-one-border video-one-border-two"></div>
     <div class="video-one-border video-one-border-three"></div>
@@ -482,34 +430,57 @@ $p_nam = 'projects';
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
-                <div class="portfolio-details__pagination-box">
-                    <ul class="portfolio-details__pagination list-unstyled clearfix">
-                        <li class="next">
-                            <div class="icon">
-                                <a href="project-details.html" aria-label="Previous"><i
-                                        class="fa fa-long-arrow-alt-right"></i></a>
-                            </div>
-                            <div class="content">
-                                <span>Previous Project</span>
-                                <p>Project Name</p>
-                            </div>
-                        </li>
-                        <li class="count"><a href="#"></a></li>
-                        <li class="count"><a href="#"></a></li>
-                        <li class="count"><a href="#"></a></li>
-                        <li class="count"><a href="#"></a></li>
-                        <li class="previous">
-                            <div class="content">
-                                <span>Next Project</span>
-                                <p>Project Name</p>
-                            </div>
-                            <div class="icon">
-                                <a href="project-details.html" aria-label="Previous"><i
-                                        class="fa fa-long-arrow-alt-right"></i></a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                @php
+                $nextProject = \App\Models\Project::where('id', '>', $project->id)->orderBy('id', 'asc')->first();
+                $prevProject = \App\Models\Project::where('id', '<', $project->id)->orderBy('id', 'desc')->first();
+                    @endphp
+                    <div class="portfolio-details__pagination-box">
+                        <ul class="portfolio-details__pagination list-unstyled clearfix">
+                            @if($prevProject)
+                            <li class="next">
+                                <div class="icon">
+                                    <a href="{{ route('projects.show', $nextProject->id) }}" aria-label="Previous"><i
+                                            class="fa fa-long-arrow-alt-right"></i></a>
+                                </div>
+                                <div class="content">
+                                    <span>Previous Project</span>
+                                    <p>{{ $prevProject->name }}</p>
+                                </div>
+                            </li>
+                            @else
+                            <li class="next d-none">
+                                <div class="content">
+                                    <span>Previous Project</span>
+                                    <p>This Is The Last Project</p>
+                                </div>
+                            </li>
+
+                            @endif
+                            <li class="count"><a href="#"></a></li>
+                            <li class="count"><a href="#"></a></li>
+                            <li class="count"><a href="#"></a></li>
+                            <li class="count"><a href="#"></a></li>
+                            @if($nextProject)
+                            <li class="previous">
+                                <div class="content">
+                                    <span>Next Project</span>
+                                    <p>{{ $nextProject->name }}</p>
+                                </div>
+                                <div class="icon">
+                                    <a href="{{ route('projects.show', $nextProject->id) }}" aria-label="Previous"><i
+                                            class="fa fa-long-arrow-alt-right"></i></a>
+                                </div>
+                            </li>
+                            @else
+                            <li class="previous d-none">
+                                <div class="content">
+                                    <span>Next Project</span>
+                                    <p>This Is the First Project</p>
+                                </div>
+                            </li>
+                            @endif
+                        </ul>
+                    </div>
             </div>
         </div>
     </div>
@@ -525,425 +496,47 @@ $p_nam = 'projects';
     <div class="container">
         <div class="row">
             <!--Gallery One Single Start-->
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                <div class="gallery-one__single">
-                    <div class="gallery-one__img-box">
-                        <div class="gallery-one__img">
-                            <img src="assets/images/project/Ahmad tea/IMG_5411.jpg" alt="">
-                        </div>
-                        <div class="gallery-one__content-box">
-                            <div class="gallery-one__content">
-                                <div class="gallery-one__shape-1">
-                                    <img src="assets/images/shapes/gallery-one-shape-1.png" alt="">
+            @foreach ($sug_proj as $pro )
+            @if ($loop->count == 3)
+            <div class="col-xl-4 col-lg-6 col-12 wow fadeInUp" data-wow-delay="100ms">
+                @elseif ($loop->count == 2)
+                <div class="col-xl-offset-4 col-xl-4 col-lg-6 col-12 wow fadeInUp" data-wow-delay="100ms">
+                    @else
+                    <div class="col-xl-offset-6 col-xl-3 col-lg-6 col-12 wow fadeInUp" data-wow-delay="100ms">
+                        @endif
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__img-box">
+                                <div class="gallery-one__img">
+                                    <img src="{{ asset('orionFrontAssets/assets/images/project/' . $pro->slug_name . '/' . $pro->main_image) }}"
+                                        alt="">
                                 </div>
-                                <div class="gallery-one__title-box">
-                                    <h3 class="gallery-one__title"><a href="project-details.html">Ahmed Tea</a></h3>
-                                    <p class="gallery-one__sub-title">Project Type Category</p>
+                                <div class="gallery-one__content-box">
+                                    <div class="gallery-one__content">
+                                        <div class="gallery-one__shape-1">
+                                            <img src="{{ asset('orionFrontAssets/assets/images/shapes/gallery-one-shape-1.png') }}"
+                                                alt="">
+                                        </div>
+                                        <div class="gallery-one__title-box">
+                                            <h3 class="gallery-one__title"><a
+                                                    href="{{ route('projects.show' , ['project'=>$pro->id]) }}">{{
+                                                    $pro->name
+                                                    }}</a></h3>
+                                            <p class="gallery-one__sub-title">{{ $pro->Client->name }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-one__arrow-box">
+                                        <a href="{{ route('projects.show' , ['project'=>$pro->id]) }}"
+                                            class="gallery-one__arrow"><span class="icon-right-arrow"></span></a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="gallery-one__arrow-box">
-                                <a href="project-details.html" class="gallery-one__arrow"><span
-                                        class="icon-right-arrow"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Gallery One Single End-->
-            <!--Gallery One Single Start-->
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                <div class="gallery-one__single">
-                    <div class="gallery-one__img-box">
-                        <div class="gallery-one__img">
-                            <img src="assets/images/project/Gulf Rubber Factory/22.JPG" alt="">
-                        </div>
-                        <div class="gallery-one__content-box">
-                            <div class="gallery-one__content">
-                                <div class="gallery-one__shape-1">
-                                    <img src="assets/images/shapes/gallery-one-shape-1.png" alt="">
-                                </div>
-                                <div class="gallery-one__title-box">
-                                    <h3 class="gallery-one__title"><a href="project-details.html">Gulf Rubber</a></h3>
-                                    <p class="gallery-one__sub-title">Project Type Category</p>
-                                </div>
-                            </div>
-                            <div class="gallery-one__arrow-box">
-                                <a href="project-details.html" class="gallery-one__arrow"><span
-                                        class="icon-right-arrow"></span></a>
                             </div>
                         </div>
                     </div>
+                    <!--Gallery One Single End-->
+                    @endforeach
+
                 </div>
             </div>
-            <!--Gallery One Single End-->
-            <!--Gallery One Single Start-->
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                <div class="gallery-one__single">
-                    <div class="gallery-one__img-box">
-                        <div class="gallery-one__img">
-                            <img src="assets/images/project/utico-water and power plant/_MG_7157.JPG" alt="">
-                        </div>
-                        <div class="gallery-one__content-box">
-                            <div class="gallery-one__content">
-                                <div class="gallery-one__shape-1">
-                                    <img src="assets/images/shapes/gallery-one-shape-1.png" alt="">
-                                </div>
-                                <div class="gallery-one__title-box">
-                                    <h3 class="gallery-one__title"><a href="project-details.html">Utico</a></h3>
-                                    <p class="gallery-one__sub-title">Project Type Category</p>
-                                </div>
-                            </div>
-                            <div class="gallery-one__arrow-box">
-                                <a href="project-details.html" class="gallery-one__arrow"><span
-                                        class="icon-right-arrow"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Gallery One Single End-->
-            <!--Gallery One Single Start-->
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                <div class="gallery-one__single">
-                    <div class="gallery-one__img-box">
-                        <div class="gallery-one__img">
-                            <img src="assets/images/project/Duber/100_0618.JPG" alt="">
-                        </div>
-                        <div class="gallery-one__content-box">
-                            <div class="gallery-one__content">
-                                <div class="gallery-one__shape-1">
-                                    <img src="assets/images/shapes/gallery-one-shape-1.png" alt="">
-                                </div>
-                                <div class="gallery-one__title-box">
-                                    <h3 class="gallery-one__title"><a href="project-details.html">Duber</a></h3>
-                                    <p class="gallery-one__sub-title">Project Type Category</p>
-                                </div>
-                            </div>
-                            <div class="gallery-one__arrow-box">
-                                <a href="project-details.html" class="gallery-one__arrow"><span
-                                        class="icon-right-arrow"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Gallery One Single End-->
-        </div>
-    </div>
 </section>
 <!--Gallery One End-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-{{--
-<footer class="site-footer">
-    <div class="site-footer__bg"
-        style="background-image: url(assets/images/backgrounds/site-footer-bg-img.png);background-repeat: repeat;background-size: 350px;">
-    </div>
-    <div class="site-footer__ripped-paper"
-        style="background-image: url(assets/images/shapes/site-footer-ripped-paper.png);"></div>
-    <div class="container">
-        <div class="site-footer__top">
-            <div class="row">
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                    <div class="footer-widget__column footer-widget__about">
-                        <div class="footer-widget__logo">
-                            <a href="index-2.html"><img src="assets/images/resources/logo-white.webp" alt=""></a>
-                        </div>
-                        <div class="footer-widget__about-text-box">
-                            <p class="footer-widget__about-text">We’re Making Your Dream <br> Became Reality</p>
-                        </div>
-                        <div class="footer-widget__social-box">
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                    <div class="footer-widget__column footer-widget__explore">
-                        <div class="footer-widget__title-box">
-                            <h3 class="footer-widget__title">Explore</h3>
-                        </div>
-                        <div class="footer-widget__explore-list-box">
-                            <ul class="footer-widget__explore-list list-unstyled">
-                                <li><a href="about.html">About Company</a></li>
-                                <li><a href="services.html">Our Sectors</a></li>
-                                <li><a href="pricing.html">Our Staff</a></li>
-                                <li><a href="products.html">Projects</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                    <div class="footer-widget__column footer-widget__contact">
-                        <div class="footer-widget__title-box">
-                            <h3 class="footer-widget__title">Contact</h3>
-                        </div>
-                        <p class="footer-widget__contact-text">UAE , Ras Al-Khaimah , Al-Hamra Industrial Area
-                        </p>
-                        <ul class="list-unstyled footer-widget__contact-list">
-                            <li>
-                                <div class="text">
-                                    <p><a href="tel:97172335531">
-                                            +971 7233 5531</a></p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="text">
-                                    <p><a href="mailto:info@orioncc.com ">info@orioncc.com</a></p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                    <div class="footer-widget__column footer-widget__gallery">
-                        <div class="footer-widget__title-box">
-                            <h3 class="footer-widget__title">Gallery</h3>
-                        </div>
-                        <ul class="footer-widget__gallery-list list-unstyled clearfix">
-                            <li>
-                                <div class="footer-widget__gallery-img">
-                                    <img src="assets/images/project/Picture1.jpg" alt="">
-                                    <a href="portfolio-details.html"><span class="fa fa-link"></span></a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="footer-widget__gallery-img">
-                                    <img src="assets/images/project/Picture10.png" alt="">
-                                    <a href="portfolio-details.html"><span class="fa fa-link"></span></a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="footer-widget__gallery-img">
-                                    <img src="assets/images/project/Picture12.png" alt="">
-                                    <a href="portfolio-details.html"><span class="fa fa-link"></span></a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="footer-widget__gallery-img">
-                                    <img src="assets/images/project/Picture32.jpg" alt="">
-                                    <a href="portfolio-details.html"><span class="fa fa-link"></span></a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="footer-widget__gallery-img">
-                                    <img src="assets/images/project/Picture212.jpg" alt="">
-                                    <a href="portfolio-details.html"><span class="fa fa-link"></span></a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="footer-widget__gallery-img">
-                                    <img src="assets/images/project/Picture3.jpg" alt="">
-                                    <a href="portfolio-details.html"><span class="fa fa-link"></span></a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="site-footer__bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="site-footer__bottom-inner">
-                        <div class="site-footer__bottom-left">
-                            <p class="site-footer__bottom-text">© Copyright 2024 by <a href="#">Orion</a>
-                            </p>
-                        </div>
-                        <div class="site-footer__bottom-right">
-                            <ul class="list-unstyled site-footer__bottom-menu">
-                                <li><a href="about.html">Terms & Conditions</a></li>
-                                <li><span>/</span></li>
-                                <li><a href="about.html">Privacy Policy</a></li>
-                                <li><span>/</span></li>
-                                <li><a href="about.html">Privacy Policy</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!--Site Footer End-->
-</div><!-- /.page-wrapper -->
-
-
-<div class="mobile-nav__wrapper">
-    <div class="mobile-nav__overlay mobile-nav__toggler"></div>
-    <!-- /.mobile-nav__overlay -->
-    <div class="mobile-nav__content">
-        <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
-
-        <div class="logo-box">
-            <a href="index-2.html" aria-label="logo image"><img src="assets/images/resources/logo-white.webp"
-                    width="104" alt="" /></a>
-        </div>
-        <!-- /.logo-box -->
-        <div class="mobile-nav__container"></div>
-        <!-- /.mobile-nav__container -->
-
-        <ul class="mobile-nav__contact list-unstyled">
-            <li>
-                <i class="fa fa-envelope"></i>
-                <a href="mailto:info@orioncc.com">info@orioncc.com</a>
-            </li>
-            <li>
-                <i class="fa fa-phone-alt"></i>
-                <a href="tel:97172335531">+971 7 2335531</a>
-            </li>
-        </ul><!-- /.mobile-nav__contact -->
-        <div class="mobile-nav__top">
-            <div class="mobile-nav__social">
-                <a href="https://www.facebook.com/orioncontractingcompany"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.linkedin.com/company/orion-contracting-company-llc/mycompany/"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://www.youtube.com/@orioncontracting9881"><i class="fab fa-youtube"></i></a>
-            </div><!-- /.mobile-nav__social -->
-        </div><!-- /.mobile-nav__top -->
-
-
-
-    </div>
-    <!-- /.mobile-nav__content -->
-</div>
-<!-- /.mobile-nav__wrapper -->
-
-<div class="search-popup">
-    <div class="search-popup__overlay search-toggler"></div>
-    <!-- /.search-popup__overlay -->
-    <div class="search-popup__content">
-        <form action="#">
-            <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
-            <input type="text" id="search" placeholder="Search Here..." />
-            <button type="submit" aria-label="search submit" class="thm-btn">
-                <i class="icon-magnifying-glass"></i>
-            </button>
-        </form>
-    </div>
-    <!-- /.search-popup__content -->
-</div>
-<!-- /.search-popup -->
-
-<a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="icon-up-arrow"></i></a>
-
-
-<script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
-<script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendors/jarallax/jarallax.min.js"></script>
-<script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
-<script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
-<script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
-<script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
-<script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
-<script src="assets/vendors/nouislider/nouislider.min.js"></script>
-<script src="assets/vendors/odometer/odometer.min.js"></script>
-<script src="assets/vendors/swiper/swiper.min.js"></script>
-<script src="assets/vendors/tiny-slider/tiny-slider.min.js"></script>
-<script src="assets/vendors/wnumb/wNumb.min.js"></script>
-<script src="assets/vendors/wow/wow.js"></script>
-<script src="assets/vendors/isotope/isotope.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.3.0/lightgallery.min.js"></script>
-<script src="assets/vendors/countdown/jquery.countdown.min.js"></script>
-<script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
-<script src="assets/vendors/bxslider/jquery.bxslider.min.js"></script>
-<script src="assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
-<script src="assets/vendors/vegas/vegas.min.js"></script>
-<script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
-<script src="assets/vendors/timepicker/timePicker.js"></script>
-<script src="assets/vendors/circleType/jquery.circleType.js"></script>
-<script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
-<script src="assets/vendors/nice-select/jquery.nice-select.min.js"></script>
-<script src="assets/js/flip/jquery.flipster.min.js"></script>
-<!-- template js -->
-<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
-<script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
-<script src="assets/js/main.js"></script>
-<script>
-    $(document).ready(function () {
-      // Initialize LightGallery
-      var lightGalleryInstance = lightGallery(document.getElementById('customize-thumbnails-gallery'), {
-        selector: 'a',
-        addClass: 'lg-custom-thumbnails',
-        appendThumbnailsTo: '.lg-outer',
-        animateThumb: true,
-        allowMediaOverlap: true,
-        speed: 500,
-        closeOnTap: true,
-        hideBarsDelay: 3000,
-        loop: true,
-        download: false,
-        counter: true,
-        enableSwipe: true,
-        enableDrag: true,
-        swipeThreshold: 50,
-        thumbnail: true,
-        animateThumb: true,
-        currentPagerPosition: 'middle',
-        thumbWidth: 100,
-        thumbHeight: '80px',
-        thumbContHeight: 100,
-        showThumbByDefault: true,
-        toogleThumb: true,
-        fullScreen: true,
-        zoom: true,
-        scale: 1,
-        actualSize: true
-      });
-
-      // Initialize Flipster
-      var flipsterInstance = $("#customize-thumbnails-gallery").flipster({
-        itemContainer: 'ul',
-        itemSelector: 'li',
-        style: 'coverflow',
-        responsive: true,
-
-        start: 'center',
-        loop: false,
-        spacing: -0.2,
-        visible: 4,
-
-        perspective: 1000,
-
-        autoplay: false,
-        pauseOnHover: false,
-        click: false,
-        keyboard: true,
-        scrollwheel: true,
-        touch: true,
-        nav: false,
-        buttons: false,
-        buttonPrev: 'Previous',
-        buttonNext: 'next',
-        onItemSwitch: $.noop
-      });
-
-      // Add click event to Flipster items to trigger LightGallery
-      $('.flipster__item').on('click', function (e) {
-        e.preventDefault();
-        var index = $(this).index();
-        lightGalleryInstance.openGallery(index);
-      });
-
-    });
-
-</script>
-</body>
-
-
-</html> --}}
+@endsection

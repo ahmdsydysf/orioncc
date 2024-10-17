@@ -18,6 +18,7 @@ class ProjectSeeder extends Seeder
         $data = [
             [
                 "name" => "Healthcare Center-RAK",
+                "slug_name" => "Healthcare_Center-RAK",
                 "status" => "completed",
                 "main_image" => "main.webp",
                 "mini_desc" => "Tincidunt elit magnis nulla facilisis sagittis sapien nunc amet ultrices dolores sit ipsum velit purus aliquet massa fringilla leo orci. Sapien nunc amet ultrices, dolores sit ipsum velit massa fringilla leo orci dolors sit amet elit amet.",
@@ -32,6 +33,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "name" => "Civil Defense Centre",
+                "slug_name" => "Civil_Defense_Centre",
                 "status" => "completed",
                 "main_image" => "main.webp",
                 "mini_desc" => "Tincidunt elit magnis nulla facilisis sagittis sapien nunc amet ultrices dolores sit ipsum velit purus aliquet massa fringilla leo orci. Sapien nunc amet ultrices, dolores sit ipsum velit massa fringilla leo orci dolors sit amet elit amet.",
@@ -46,6 +48,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "name" => "National Housing",
+                "slug_name" => "National_Housing",
                 "status" => "completed",
                 "main_image" => "main.webp",
                 "mini_desc" => "Tincidunt elit magnis nulla facilisis sagittis sapien nunc amet ultrices dolores sit ipsum velit purus aliquet massa fringilla leo orci. Sapien nunc amet ultrices, dolores sit ipsum velit massa fringilla leo orci dolors sit amet elit amet.",
@@ -60,6 +63,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "name" => "46 Villas",
+                "slug_name" => "46_Villas",
                 "status" => "completed",
                 "main_image" => "main.webp",
                 "mini_desc" => "Tincidunt elit magnis nulla facilisis sagittis sapien nunc amet ultrices dolores sit ipsum velit purus aliquet massa fringilla leo orci. Sapien nunc amet ultrices, dolores sit ipsum velit massa fringilla leo orci dolors sit amet elit amet.",
@@ -74,6 +78,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "name" => "EQUESTRIAN STABLES & CAMEL CLUB",
+                "slug_name" => "EQUESTRIAN_STABLES_&_CAMEL_CLUB",
                 "status" => "completed",
                 "main_image" => "main.webp",
                 "mini_desc" => "Tincidunt elit magnis nulla facilisis sagittis sapien nunc amet ultrices dolores sit ipsum velit purus aliquet massa fringilla leo orci. Sapien nunc amet ultrices, dolores sit ipsum velit massa fringilla leo orci dolors sit amet elit amet.",
@@ -88,6 +93,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "name" => "Hotel",
+                "slug_name" => "Hotel",
                 "status" => "completed",
                 "main_image" => "main.webp",
                 "mini_desc" => "Tincidunt elit magnis nulla facilisis sagittis sapien nunc amet ultrices dolores sit ipsum velit purus aliquet massa fringilla leo orci. Sapien nunc amet ultrices, dolores sit ipsum velit massa fringilla leo orci dolors sit amet elit amet.",
@@ -102,6 +108,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "name" => "Wedding Hall – Adhan - RAK",
+                "slug_name" => "Wedding_Hall_–_Adhan_-_RAK",
                 "status" => "completed",
                 "main_image" => "main.webp",
                 "mini_desc" => "Tincidunt elit magnis nulla facilisis sagittis sapien nunc amet ultrices dolores sit ipsum velit purus aliquet massa fringilla leo orci. Sapien nunc amet ultrices, dolores sit ipsum velit massa fringilla leo orci dolors sit amet elit amet.",
@@ -116,6 +123,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "name" => "Streit FACTORY",
+                "slug_name" => "Streit_FACTORY",
                 "status" => "completed",
                 "main_image" => "main.webp",
                 "mini_desc" => "Tincidunt elit magnis nulla facilisis sagittis sapien nunc amet ultrices dolores sit ipsum velit purus aliquet massa fringilla leo orci. Sapien nunc amet ultrices, dolores sit ipsum velit massa fringilla leo orci dolors sit amet elit amet.",
@@ -130,6 +138,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "name" => "Rakez Warehouses",
+                "slug_name" => "Rakez_Warehouses",
                 "status" => "completed",
                 "main_image" => "main.webp",
                 "mini_desc" => "Tincidunt elit magnis nulla facilisis sagittis sapien nunc amet ultrices dolores sit ipsum velit purus aliquet massa fringilla leo orci. Sapien nunc amet ultrices, dolores sit ipsum velit massa fringilla leo orci dolors sit amet elit amet.",
@@ -144,6 +153,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "name" => "Al Ghurair Aluminum Factory",
+                "slug_name" => "Al_Ghurair_Aluminum_Factory",
                 "status" => "completed",
                 "main_image" => "main.webp",
                 "mini_desc" => "Tincidunt elit magnis nulla facilisis sagittis sapien nunc amet ultrices dolores sit ipsum velit purus aliquet massa fringilla leo orci. Sapien nunc amet ultrices, dolores sit ipsum velit massa fringilla leo orci dolors sit amet elit amet.",
@@ -158,6 +168,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "name" => "UTICO DESLINATION PLANT",
+                "slug_name" => "UTICO_DESLINATION_PLANT",
                 "status" => "completed",
                 "main_image" => "main.webp",
                 "mini_desc" => "Tincidunt elit magnis nulla facilisis sagittis sapien nunc amet ultrices dolores sit ipsum velit purus aliquet massa fringilla leo orci. Sapien nunc amet ultrices, dolores sit ipsum velit massa fringilla leo orci dolors sit amet elit amet.",
@@ -172,6 +183,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "name" => "AL NAKHEEL PAPERMILL",
+                "slug_name" => "AL_NAKHEEL_PAPERMILL",
                 "status" => "completed",
                 "main_image" => "main.webp",
                 "mini_desc" => "Tincidunt elit magnis nulla facilisis sagittis sapien nunc amet ultrices dolores sit ipsum velit purus aliquet massa fringilla leo orci. Sapien nunc amet ultrices, dolores sit ipsum velit massa fringilla leo orci dolors sit amet elit amet.",
@@ -186,6 +198,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "name" => "iPack Aseptic Packging",
+                "slug_name" => "iPack_Aseptic_Packging",
                 "status" => "completed",
                 "main_image" => "main.webp",
                 "mini_desc" => "Tincidunt elit magnis nulla facilisis sagittis sapien nunc amet ultrices dolores sit ipsum velit purus aliquet massa fringilla leo orci. Sapien nunc amet ultrices, dolores sit ipsum velit massa fringilla leo orci dolors sit amet elit amet.",
@@ -200,6 +213,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "name" => "Fence International",
+                "slug_name" => "Fence_International",
                 "status" => "completed",
                 "main_image" => "main.webp",
                 "mini_desc" => "Tincidunt elit magnis nulla facilisis sagittis sapien nunc amet ultrices dolores sit ipsum velit purus aliquet massa fringilla leo orci. Sapien nunc amet ultrices, dolores sit ipsum velit massa fringilla leo orci dolors sit amet elit amet.",
@@ -214,6 +228,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "name" => "INEGRA CEMENT FACTORY",
+                "slug_name" => "INEGRA_CEMENT_FACTORY",
                 "status" => "completed",
                 "main_image" => "main.webp",
                 "mini_desc" => "Tincidunt elit magnis nulla facilisis sagittis sapien nunc amet ultrices dolores sit ipsum velit purus aliquet massa fringilla leo orci. Sapien nunc amet ultrices, dolores sit ipsum velit massa fringilla leo orci dolors sit amet elit amet.",
@@ -228,6 +243,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "name" => "Air Liquid - Plant, factory and storage sheds",
+                "slug_name" => "Air_Liquid_-_Plant,_factory_and_storage_sheds",
                 "status" => "completed",
                 "main_image" => "main.webp",
                 "mini_desc" => "Tincidunt elit magnis nulla facilisis sagittis sapien nunc amet ultrices dolores sit ipsum velit purus aliquet massa fringilla leo orci. Sapien nunc amet ultrices, dolores sit ipsum velit massa fringilla leo orci dolors sit amet elit amet.",
@@ -242,6 +258,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "name" => "AHMED TEA (London)",
+                "slug_name" => "AHMED_TEA_(London)",
                 "status" => "completed",
                 "main_image" => "main.webp",
                 "mini_desc" => "Tincidunt elit magnis nulla facilisis sagittis sapien nunc amet ultrices dolores sit ipsum velit purus aliquet massa fringilla leo orci. Sapien nunc amet ultrices, dolores sit ipsum velit massa fringilla leo orci dolors sit amet elit amet.",
@@ -256,6 +273,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "name" => "Dual Carriageway and Golf Area",
+                "slug_name" => "Dual_Carriageway_and_Golf_Area",
                 "status" => "completed",
                 "main_image" => "main.webp",
                 "mini_desc" => "Tincidunt elit magnis nulla facilisis sagittis sapien nunc amet ultrices dolores sit ipsum velit purus aliquet massa fringilla leo orci. Sapien nunc amet ultrices, dolores sit ipsum velit massa fringilla leo orci dolors sit amet elit amet.",
@@ -270,6 +288,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "name" => "Etihad Rail",
+                "slug_name" => "Etihad_Rail",
                 "status" => "completed",
                 "main_image" => "main.webp",
                 "mini_desc" => "Tincidunt elit magnis nulla facilisis sagittis sapien nunc amet ultrices dolores sit ipsum velit purus aliquet massa fringilla leo orci. Sapien nunc amet ultrices, dolores sit ipsum velit massa fringilla leo orci dolors sit amet elit amet.",
@@ -284,6 +303,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "name" => "Etihad Rail Roads and Infrastructure Works",
+                "slug_name" => "Etihad_Rail_Roads_and_Infrastructure_Works",
                 "status" => "completed",
                 "main_image" => "main.webp",
                 "mini_desc" => "Tincidunt elit magnis nulla facilisis sagittis sapien nunc amet ultrices dolores sit ipsum velit purus aliquet massa fringilla leo orci. Sapien nunc amet ultrices, dolores sit ipsum velit massa fringilla leo orci dolors sit amet elit amet.",
@@ -298,6 +318,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "name" => "Al Mairid Ras Al Khaimah",
+                "slug_name" => "Al_Mairid_Ras_Al_Khaimah",
                 "status" => "completed",
                 "main_image" => "main.webp",
                 "mini_desc" => "Tincidunt elit magnis nulla facilisis sagittis sapien nunc amet ultrices dolores sit ipsum velit purus aliquet massa fringilla leo orci. Sapien nunc amet ultrices, dolores sit ipsum velit massa fringilla leo orci dolors sit amet elit amet.",
@@ -312,6 +333,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "name" => "Heritage village Ras Al Khaimah",
+                "slug_name" => "Heritage_village_Ras_Al_Khaimah",
                 "status" => "completed",
                 "main_image" => "main.webp",
                 "mini_desc" => "Tincidunt elit magnis nulla facilisis sagittis sapien nunc amet ultrices dolores sit ipsum velit purus aliquet massa fringilla leo orci. Sapien nunc amet ultrices, dolores sit ipsum velit massa fringilla leo orci dolors sit amet elit amet.",
@@ -329,6 +351,7 @@ class ProjectSeeder extends Seeder
         foreach ($data as $key => $value) {
             Project::create([
                 'name' => $value['name'],
+                'slug_name' => $value['slug_name'],
                 'status' => $value['status'],
                 'main_image' => $value['main_image'],
                 'mini_desc' => $value['mini_desc'],

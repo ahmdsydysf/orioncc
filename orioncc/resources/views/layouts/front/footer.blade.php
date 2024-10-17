@@ -12,7 +12,7 @@
                 <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                     <div class="footer-widget__column footer-widget__about">
                         <div class="footer-widget__logo">
-                            <a href="index-2.html"><img
+                            <a href="{{ route('home') }}"><img
                                     src="{{ asset('orionFrontAssets/assets/images/resources/logo-white.webp') }}"
                                     alt=""></a>
                         </div>
@@ -152,7 +152,7 @@
         <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
         <div class="logo-box">
-            <a href="index-2.html" aria-label="logo image"><img
+            <a href="{{ route('home') }}" aria-label="logo image"><img
                     src="{{ asset('orionFrontAssets/assets/images/resources/logo-white.webp') }}" width="104"
                     alt="" /></a>
         </div>

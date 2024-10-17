@@ -3,7 +3,12 @@
 $p_nam = 'sectors';
 @endphp
 @section('page_name' , 'Orion Sectors')
-
+@section('pageLoader')
+<div class="preloader">
+    <div class="preloader__image"></div>
+</div>
+<!-- /.preloader -->
+@endsection
 @section('css_style_links')
 <link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/vendors/bootstrap/css/bootstrap.min.css') }}" />
 <link rel="stylesheet" href="{{ asset('orionFrontAssets/assets/vendors/animate/animate.min.css') }}" />
@@ -184,56 +189,15 @@ $p_nam = 'sectors';
             }}">
                     <div class="swiper-wrapper"
                         style="transform: translate3d(-1270px, 0px, 0px); transition-duration: 0ms;">
+                        @foreach ($sector->Projects as $project )
                         <div class="swiper-slide" style="width: 154px; margin-right: 100px;">
-                            <a href="project-details.html"> <img
-                                    src="{{ asset('orionFrontAssets/assets/images/project/Picture3.jpg')}}"
+                            <a href="{{ route('projects.show' , ['project'=>$project->id]) }}"> <img
+                                    src="{{ asset('orionFrontAssets/assets/images/project/'.$project->slug_name.'/'.$project->main_image)}}"
                                     style="width: 225px;height:155px" alt=""></a>
                         </div><!-- /.swiper-slide -->
-                        <div class="swiper-slide" style="width: 154px; margin-right: 100px;">
-                            <a href="project-details.html"> <img
-                                    src="{{ asset('orionFrontAssets/assets/images/project/Picture1.jpg')}}"
-                                    style="width: 225px;height:155px" alt=""></a>
-                        </div><!-- /.swiper-slide -->
-                        <div class="swiper-slide" style="width: 154px; margin-right: 100px;">
-                            <a href="project-details.html"> <img
-                                    src="{{ asset('orionFrontAssets/assets/images/project/Picture10.png')}}"
-                                    style="width: 225px;height:155px" alt=""></a>
-                        </div><!-- /.swiper-slide -->
-                        <div class="swiper-slide" style="width: 154px; margin-right: 100px;">
-                            <a href="project-details.html"> <img
-                                    src="{{ asset('orionFrontAssets/assets/images/project/Picture12.png')}}"
-                                    style="width: 225px;height:155px" alt=""></a>
-                        </div><!-- /.swiper-slide -->
-                        <div class="swiper-slide swiper-slide-prev" style="width: 154px; margin-right: 100px;">
-                            <a href="project-details.html"> <img
-                                    src="{{ asset('orionFrontAssets/assets/images/project/Picture32.jpg')}}"
-                                    style="width: 225px;height:155px" alt=""></a>
-                        </div><!-- /.swiper-slide -->
-                        <div class="swiper-slide swiper-slide-active" style="width: 154px; margin-right: 100px;">
-                            <a href="project-details.html"> <img
-                                    src="{{ asset('orionFrontAssets/assets/images/project/Picture5.jpg')}}"
-                                    style="width: 225px;height:155px" alt=""></a>
-                        </div><!-- /.swiper-slide -->
-                        <div class="swiper-slide swiper-slide-next" style="width: 154px; margin-right: 100px;">
-                            <a href="project-details.html"> <img
-                                    src="{{ asset('orionFrontAssets/assets/images/project/Picture6.jpg')}}"
-                                    style="width: 225px;height:155px" alt=""></a>
-                        </div><!-- /.swiper-slide -->
-                        <div class="swiper-slide" style="width: 154px; margin-right: 100px;">
-                            <a href="project-details.html"> <img
-                                    src="{{ asset('orionFrontAssets/assets/images/project/Picture8.png')}}"
-                                    style="width: 225px;height:155px" alt=""></a>
-                        </div><!-- /.swiper-slide -->
-                        <div class="swiper-slide" style="width: 154px; margin-right: 100px;">
-                            <a href="project-details.html"> <img
-                                    src="{{ asset('orionFrontAssets/assets/images/project/Picture1.jpg')}}"
-                                    style="width: 225px;height:155px" alt=""></a>
-                        </div><!-- /.swiper-slide -->
-                        <div class="swiper-slide" style="width: 154px; margin-right: 100px;">
-                            <a href="project-details.html"> <img
-                                    src="{{ asset('orionFrontAssets/assets/images/project/Picture12.png')}}"
-                                    style="width: 225px;height:155px" alt=""></a>
-                        </div><!-- /.swiper-slide -->
+
+                        @endforeach
+
                     </div>
                     <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                 </div>
@@ -316,56 +280,13 @@ $p_nam = 'sectors';
             }}">
                     <div class="swiper-wrapper"
                         style="transform: translate3d(-1270px, 0px, 0px); transition-duration: 0ms;">
+                        @foreach ($sector->Projects as $project )
                         <div class="swiper-slide" style="width: 154px; margin-right: 100px;">
-                            <a href="project-details.html"> <img
-                                    src="{{ asset('orionFrontAssets/assets/images/project/Picture3.jpg')}}"
+                            <a href="{{ route('projects.show' , ['project'=>$project->id]) }}"> <img
+                                    src="{{ asset('orionFrontAssets/assets/images/project/'.$project->slug_name.'/'.$project->main_image)}}"
                                     style="width: 225px;height:155px" alt=""></a>
                         </div><!-- /.swiper-slide -->
-                        <div class="swiper-slide" style="width: 154px; margin-right: 100px;">
-                            <a href="project-details.html"> <img
-                                    src="{{ asset('orionFrontAssets/assets/images/project/Picture1.jpg')}}"
-                                    style="width: 225px;height:155px" alt=""></a>
-                        </div><!-- /.swiper-slide -->
-                        <div class="swiper-slide" style="width: 154px; margin-right: 100px;">
-                            <a href="project-details.html"> <img
-                                    src="{{ asset('orionFrontAssets/assets/images/project/Picture10.png')}}"
-                                    style="width: 225px;height:155px" alt=""></a>
-                        </div><!-- /.swiper-slide -->
-                        <div class="swiper-slide" style="width: 154px; margin-right: 100px;">
-                            <a href="project-details.html"> <img
-                                    src="{{ asset('orionFrontAssets/assets/images/project/Picture12.png')}}"
-                                    style="width: 225px;height:155px" alt=""></a>
-                        </div><!-- /.swiper-slide -->
-                        <div class="swiper-slide swiper-slide-prev" style="width: 154px; margin-right: 100px;">
-                            <a href="project-details.html"> <img
-                                    src="{{ asset('orionFrontAssets/assets/images/project/Picture32.jpg')}}"
-                                    style="width: 225px;height:155px" alt=""></a>
-                        </div><!-- /.swiper-slide -->
-                        <div class="swiper-slide swiper-slide-active" style="width: 154px; margin-right: 100px;">
-                            <a href="project-details.html"> <img
-                                    src="{{ asset('orionFrontAssets/assets/images/project/Picture5.jpg')}}"
-                                    style="width: 225px;height:155px" alt=""></a>
-                        </div><!-- /.swiper-slide -->
-                        <div class="swiper-slide swiper-slide-next" style="width: 154px; margin-right: 100px;">
-                            <a href="project-details.html"> <img
-                                    src="{{ asset('orionFrontAssets/assets/images/project/Picture6.jpg')}}"
-                                    style="width: 225px;height:155px" alt=""></a>
-                        </div><!-- /.swiper-slide -->
-                        <div class="swiper-slide" style="width: 154px; margin-right: 100px;">
-                            <a href="project-details.html"> <img
-                                    src="{{ asset('orionFrontAssets/assets/images/project/Picture8.png')}}"
-                                    style="width: 225px;height:155px" alt=""></a>
-                        </div><!-- /.swiper-slide -->
-                        <div class="swiper-slide" style="width: 154px; margin-right: 100px;">
-                            <a href="project-details.html"> <img
-                                    src="{{ asset('orionFrontAssets/assets/images/project/Picture1.jpg')}}"
-                                    style="width: 225px;height:155px" alt=""></a>
-                        </div><!-- /.swiper-slide -->
-                        <div class="swiper-slide" style="width: 154px; margin-right: 100px;">
-                            <a href="project-details.html"> <img
-                                    src="{{ asset('orionFrontAssets/assets/images/project/Picture12.png')}}"
-                                    style="width: 225px;height:155px" alt=""></a>
-                        </div><!-- /.swiper-slide -->
+                        @endforeach
                     </div>
                     <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                 </div>

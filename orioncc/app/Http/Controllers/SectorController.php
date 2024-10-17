@@ -12,7 +12,7 @@ class SectorController extends Controller
      */
     public function index()
     {
-        $allData = Sector::all();
+        $allData = Sector::with('Projects')->get();
         return view('orionccFront.sectors', compact('allData'));
     }
 

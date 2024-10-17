@@ -17,16 +17,7 @@
     <meta name="keywords"
         content="constructing, contracting, build, UAE, Ras Al Khaimah, Dubai,Mechanical electrical and plumbing ,Businesses, construct, mep, MEP, INFRASTRUCTURE, roads, LANDSCAPE">
     <meta name="robots" content="index, follow">
-    <!-- <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Your Company Name",
-          "url": "https://www.example.com",
-          "logo": "https://www.example.com/logo.jpg"
-        }
-        </script>
-         -->
+
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
 
@@ -45,10 +36,7 @@
     <div class="custom-cursor__cursor"></div>
     <div class="custom-cursor__cursor-two"></div>
 
-    <div class="preloader">
-        <div class="preloader__image"></div>
-    </div>
-    <!-- /.preloader -->
+    @yield('pageLoader')
 
     <div class="page-wrapper">
         <header class="main-header">

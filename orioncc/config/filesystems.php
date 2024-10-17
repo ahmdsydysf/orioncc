@@ -39,7 +39,7 @@ return [
 
         'media' => [
             'driver' => 'local',
-            'root'   => public_path('orionFrontAssets.media'),
+            'root'   => public_path('orionFrontAssets/media'),
             'url'    => env('APP_URL').'/orionFrontAssets/media',
         ],
 
