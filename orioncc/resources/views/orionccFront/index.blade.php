@@ -356,28 +356,31 @@ $p_nam = 'home';
                     <div class="row">
                         <div class="news-sidebar__single">
                             <div class="news-sidebar__img">
-                                <img src="{{ asset('orionFrontAssets/assets/images/blog/WA_02686.jpg') }}" alt="">
+                                <img src="{{ asset('orionFrontAssets/assets/images/blog/' . $main_event->main_image) }}"
+                                    alt="">
                                 <div class="news-sidebar__date">
-                                    <p>20 Sep</p>
+                                    <p>{{ $main_event->created_at->format('d M') }}</p>
                                 </div>
                             </div>
                             <div class="news-sidebar__content-box">
                                 <ul class="list-unstyled news-sidebar__meta">
-                                    <li><a href="news-details.html"><i class="fas fa-tag"></i>New Deal</a>
+                                    <li>
+                                        <<i class="fas fa-tag"></i>New Deal
                                     </li>
-                                    <li><a href="news-details.html"><i class="fas fa-user-circle"></i>by
-                                            Admin</a>
+                                    <li>
+                                        <<i class="fas fa-user-circle"></i>by
+                                            Admin
                                     </li>
                                 </ul>
                                 <h3 class="news-sidebar__title">
-                                    <a href="news-details.html">We are the first best chooise for any company</a>
+                                    <a href="{{ route('news.show' , ['news' => $main_event->id]) }}">{{
+                                        $main_event->title
+                                        }}</a>
                                 </h3>
-                                <p class="news-sidebar__text">There are many variations of passages of lorem
-                                    ipsum available, but majority have suffered alteration in some form, by
-                                    injected humour, or randomised words which don't look even slightly
-                                    believable. If you are going to use a passage.</p>
+                                <p class="news-sidebar__text">{{ $main_event->mini_description }}</p>
                                 <div class="news-sidebar__bottom">
-                                    <a href="news-details.html" class="news-sidebar__read-more">Read More <span
+                                    <a href="{{ route('news.show' , ['news' => $main_event->id]) }}"
+                                        class="news-sidebar__read-more">Read More <span
                                             class="icon-right-arrow"></span></a>
                                 </div>
                             </div>
@@ -386,7 +389,7 @@ $p_nam = 'home';
                 </div>
             </div>
         </div>
-        <div=class="news-carousel thm-owl__carousel owl-theme owl-carousel carousel-dot-style" data-owl-options='{
+        <div class="news-carousel thm-owl__carousel owl-theme owl-carousel carousel-dot-style" data-owl-options='{
                     "items": 3,
                     "margin": 30,
                     "smartSpeed": 700,
@@ -407,101 +410,48 @@ $p_nam = 'home';
                         }
                     }
                 }'>
+
+            @foreach ( $events as $event )
+
             <!--News One Single Start-->
             <div class="item">
                 <div class="news-one__single">
                     <div class="news-one__img-box">
                         <div class="news-one__img">
-                            <img src="{{ asset('orionFrontAssets/assets/images/blog/WA_02686.jpg') }}" alt="">
+                            <img src="{{ asset('orionFrontAssets/assets/images/blog/' . $event->main_image) }}" alt="">
                         </div>
                     </div>
                     <div class="news-one__content-box">
                         <ul class="news-one__meta list-unstyled">
                             <li>
-                                <a href="news-details.html"><i class="fa fa-tag"></i>MEP</a>
+                                <i class="fa fa-tag"></i>MEP
                             </li>
                             <li>
-                                <a href="news-details.html"><i class="fas fa-user-circle"></i>by Admin</a>
+                                <i class="fas fa-user-circle"></i>by Admin
                             </li>
                         </ul>
-                        <h3 class="news-one__title"><a href="news-details.html">Event Main Title</a></h3>
+                        <h3 class="news-one__title"><a href="{{ route('news.show' , ['news' => $event->id]) }}">{{
+                                $event->title }}</a></h3>
                         <div class="news-one__bottom">
                             <div class="news-one__read-more">
-                                <a href="news-details.html">Read More</a>
+                                <a href="{{ route('news.show' , ['news' => $event->id]) }}">Read More</a>
                             </div>
 
                         </div>
                         <div class="news-one__date">
-                            <p>20 Sep</p>
+                            <p>{{ $event->created_at->format('d M') }}</p>
                         </div>
                     </div>
                 </div>
             </div>
             <!--News One Single End-->
-            <!--News One Single Start-->
-            <div class="item">
-                <div class="news-one__single">
-                    <div class="news-one__img-box">
-                        <div class="news-one__img">
-                            <img src="{{ asset('orionFrontAssets/assets/images/blog/WA_04135.JPG') }}" alt="">
-                        </div>
-                    </div>
-                    <div class="news-one__content-box">
-                        <ul class="news-one__meta list-unstyled">
-                            <li>
-                                <a href="news-details.html"><i class="fa fa-tag"></i>Branch</a>
-                            </li>
-                            <li>
-                                <a href="news-details.html"><i class="fas fa-user-circle"></i>by Admin</a>
-                            </li>
-                        </ul>
-                        <h3 class="news-one__title"><a href="news-details.html">New Branch On Dubai</a></h3>
-                        <div class="news-one__bottom">
-                            <div class="news-one__read-more">
-                                <a href="news-details.html">Read More</a>
-                            </div>
+            @endforeach
 
-                        </div>
-                        <div class="news-one__date">
-                            <p>20 Sep</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--News One Single End-->
-            <!--News One Single Start-->
-            <div class="item">
-                <div class="news-one__single">
-                    <div class="news-one__img-box">
-                        <div class="news-one__img">
-                            <img src="{{ asset('orionFrontAssets/assets/images/blog/WA_04343.JPG') }}" alt="">
-                        </div>
-                    </div>
-                    <div class="news-one__content-box">
-                        <ul class="news-one__meta list-unstyled">
-                            <li>
-                                <a href="news-details.html"><i class="fa fa-tag"></i>Infrastructure </a>
-                            </li>
-                            <li>
-                                <a href="news-details.html"><i class="fas fa-user-circle"></i>by Admin</a>
-                            </li>
-                        </ul>
-                        <h3 class="news-one__title"><a href="news-details.html">Make a New Deal With RAKEZ</a></h3>
-                        <div class="news-one__bottom">
-                            <div class="news-one__read-more">
-                                <a href="news-details.html">Read More</a>
-                            </div>
 
-                        </div>
-                        <div class="news-one__date">
-                            <p>20 Sep</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--News One Single End-->
-
-            </div=class=>
+        </div>
+        <div class="testimonial-one__btn-box offset-5">
+            <a href="{{ route('news.index') }}" class="testimonial-one__btn thm-btn">Check Our Events</a>
+        </div>
     </div>
 </section>
 <!--News Carousel Page End-->

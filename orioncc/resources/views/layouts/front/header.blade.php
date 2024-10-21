@@ -103,9 +103,12 @@
                                                 <li @class(['current'=> $p_nam == 'certificate'])>
                                                     <a href="{{ route('certificate.index') }}">Certification</a>
                                                 </li>
-                                                <li @class(['current'=> $p_nam == 'team'])>
-                                                    <a href="{{ route('team') }}">Our Team</a>
+                                                <li @class(['current'=> $p_nam == 'news'])>
+                                                    <a href="{{ route('news.index') }}">Our News</a>
                                                 </li>
+                                                {{-- <li @class(['current'=> $p_nam == 'team'])>
+                                                    <a href="{{ route('team') }}">Our Team</a>
+                                                </li> --}}
                                                 <li @class(['current'=> $p_nam == 'about'])>
                                                     <a href="{{ route('about') }}">About Us</a>
                                                 </li>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CertificateController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\MainHomePageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
@@ -11,10 +12,12 @@ Route::get('/', [MainHomePageController::class , 'index'])->name('home');
 Route::resource('projects' , ProjectController::class);
 Route::resource('certificate' , CertificateController::class );
 Route::resource('sectors' , SectorController::class);
+Route::resource('news' , EventController::class);
 Route::get('/projects-list', [ProjectController::class , 'indexOfList'])->name('indexOfList');
 Route::get('/contact', function(){
     return view('orionccFront.contact');
 })->name('contact');
+
 
 // Route::get('/our-projects', function () {
 //     return view('orionccFront.projects');
