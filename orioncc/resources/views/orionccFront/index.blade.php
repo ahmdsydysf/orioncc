@@ -489,281 +489,40 @@ $p_nam = 'home';
             </div>
             <div class="hot-products-two__bottom">
                 <div class="row filter-layout">
-                    <!-- Hot Products Two Single Start -->
-                    <div class="col-xl-4 col-lg-6 col-md-6 filter-item fresh Commercial">
-                        <div class="hot-products__single">
-                            <div class="hot-products__single-inner">
-                                <div class="hot-products__img-box">
-                                    <div class="hot-products__img">
-                                        <img src="{{ asset('orionFrontAssets/assets/images/project/Picture32.jpg') }}"
-                                            alt="">
+                    @foreach ($projects as $project )
+                        <!-- Hot Products Two Single Start -->
+                        <div class="col-xl-4 col-lg-6 col-md-6 filter-item fresh Commercial">
+                            <div class="hot-products__single">
+                                <div class="hot-products__single-inner">
+                                    <div class="hot-products__img-box">
+                                        <div class="hot-products__img">
+                                            <img src="{{ asset('orionFrontAssets/assets/images/project/' . $project->slug_name . '/' . $project->main_image) }}"
+                                                alt="">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="hot-products__content">
-                                    <!-- <div class="hot-products__rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div> -->
-                                    <h3 class="hot-products__title"><a href="product-details.html">Helthcare
-                                            Center-RAK</a>
-                                    </h3>
-                                    <p class="hot-products__price">Commercial</p>
-                                    <div class="hot-products__btn-box">
-                                        <a href="cart.html" class="hot-products__btn thm-btn">More</a>
+                                    <div class="hot-products__content">
+                                        <!-- <div class="hot-products__rating">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div> -->
+                                        <h3 class="hot-products__title"><a href="{{ route('projects.show' , ['project' => $project->id]) }}">{{ $project->name }}</a>
+                                        </h3>
+                                        <p class="hot-products__price">{{ $project->Sector->name }}</p>
+                                        <div class="hot-products__btn-box">
+                                            <a href="{{ route('projects.show' , ['project' => $project->id]) }}" class="hot-products__btn thm-btn">More</a>
+                                        </div>
                                     </div>
-                                </div>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Hot Products Two Single End -->
-                    <!-- Hot Products Two Single Start -->
-                    <div class="col-xl-4 col-lg-6 col-md-6 filter-item fresh Commercial">
-                        <div class="hot-products__single">
-                            <div class="hot-products__single-inner">
-                                <div class="hot-products__img-box">
-                                    <div class="hot-products__img">
-                                        <img src="{{ asset('orionFrontAssets/assets/images/project/Picture1.jpg') }}"
-                                            alt="">
-                                    </div>
-                                </div>
-                                <div class="hot-products__content">
-                                    <!-- <div class="hot-products__rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div> -->
-                                    <h3 class="hot-products__title"><a href="product-details.html">Civil Defense
-                                            Center</a>
-                                    </h3>
-                                    <p class="hot-products__price">Commercial</p>
-                                    <div class="hot-products__btn-box">
-                                        <a href="cart.html" class="hot-products__btn thm-btn">More</a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Hot Products Two Single End -->
-                    <!-- Hot Products Two Single Start -->
-                    <div class="col-xl-4 col-lg-6 col-md-6 filter-item fresh Commercial">
-                        <div class="hot-products__single">
-                            <div class="hot-products__single-inner">
-                                <div class="hot-products__img-box">
-                                    <div class="hot-products__img">
-                                        <img src="{{ asset('orionFrontAssets/assets/images/project/Picture12.png') }}"
-                                            alt="">
-                                    </div>
-                                </div>
-                                <div class="hot-products__content">
-                                    <!-- <div class="hot-products__rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div> -->
-                                    <h3 class="hot-products__title"><a href="product-details.html">46 Villa
-                                            Project</a>
-                                    </h3>
-                                    <p class="hot-products__price">Residential</p>
-                                    <div class="hot-products__btn-box">
-                                        <a href="cart.html" class="hot-products__btn thm-btn">More</a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Hot Products Two Single End -->
-                    <!-- Hot Products Two Single Start -->
-                    <div class="col-xl-4 col-lg-6 col-md-6 filter-item fresh Commercial">
-                        <div class="hot-products__single">
-                            <div class="hot-products__single-inner">
-                                <div class="hot-products__img-box">
-                                    <div class="hot-products__img">
-                                        <img src="{{ asset('orionFrontAssets/assets/images/project/Picture3.jpg') }}"
-                                            alt="">
-                                    </div>
-                                </div>
-                                <div class="hot-products__content">
-                                    <!-- <div class="hot-products__rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div> -->
-                                    <h3 class="hot-products__title"><a href="product-details.html">RAKZ
-                                            Accommodations</a>
-                                    </h3>
-                                    <p class="hot-products__price">Turnkey Solution</p>
-                                    <div class="hot-products__btn-box">
-                                        <a href="cart.html" class="hot-products__btn thm-btn">More</a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Hot Products Two Single End -->
-                    <!-- Hot Products Two Single Start -->
-                    <div class="col-xl-4 col-lg-6 col-md-6 filter-item fresh Commercial">
-                        <div class="hot-products__single">
-                            <div class="hot-products__single-inner">
-                                <div class="hot-products__img-box">
-                                    <div class="hot-products__img">
-                                        <img src="{{ asset('orionFrontAssets/assets/images/project/Picture212.jpg') }}"
-                                            alt="">
-                                    </div>
-                                </div>
-                                <div class="hot-products__content">
-                                    <!-- <div class="hot-products__rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div> -->
-                                    <h3 class="hot-products__title"><a href="product-details.html">Equestrian
-                                            Stables</a>
-                                    </h3>
-                                    <p class="hot-products__price">Hospitality</p>
-                                    <div class="hot-products__btn-box">
-                                        <a href="cart.html" class="hot-products__btn thm-btn">More</a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Hot Products Two Single End -->
-                    <!-- Hot Products Two Single Start -->
-                    <div class="col-xl-4 col-lg-6 col-md-6 filter-item fresh Commercial">
-                        <div class="hot-products__single">
-                            <div class="hot-products__single-inner">
-                                <div class="hot-products__img-box">
-                                    <div class="hot-products__img">
-                                        <img src="{{ asset('orionFrontAssets/assets/images/project/Picture5.jpg') }}"
-                                            alt="">
-                                    </div>
-                                </div>
-                                <div class="hot-products__content">
-
-                                    <h3 class="hot-products__title"><a href="product-details.html">Hotel</a>
-                                    </h3>
-                                    <p class="hot-products__price">Hospitality</p>
-                                    <div class="hot-products__btn-box">
-                                        <a href="cart.html" class="hot-products__btn thm-btn">More</a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Hot Products Two Single End -->
-                    <!-- Hot Products Two Single Start -->
-                    <div class="col-xl-4 col-lg-6 col-md-6 filter-item fresh Commercial">
-                        <div class="hot-products__single">
-                            <div class="hot-products__single-inner">
-                                <div class="hot-products__img-box">
-                                    <div class="hot-products__img">
-                                        <img src="{{ asset('orionFrontAssets/assets/images/project/Picture6.jpg') }}"
-                                            alt="">
-                                    </div>
-                                </div>
-                                <div class="hot-products__content">
-                                    <!-- <div class="hot-products__rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div> -->
-                                    <h3 class="hot-products__title"><a href="product-details.html">Wedding Hall
-                                            - Adhan</a>
-                                    </h3>
-                                    <p class="hot-products__price">Hospitality</p>
-                                    <div class="hot-products__btn-box">
-                                        <a href="cart.html" class="hot-products__btn thm-btn">More</a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Hot Products Two Single End -->
-                    <!-- Hot Products Two Single Start -->
-                    <div class="col-xl-4 col-lg-6 col-md-6 filter-item fresh Commercial">
-                        <div class="hot-products__single">
-                            <div class="hot-products__single-inner">
-                                <div class="hot-products__img-box">
-                                    <div class="hot-products__img">
-                                        <img src="{{ asset('orionFrontAssets/assets/images/project/Picture8.png') }}"
-                                            alt="">
-                                    </div>
-                                </div>
-                                <div class="hot-products__content">
-                                    <!-- <div class="hot-products__rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div> -->
-                                    <h3 class="hot-products__title"><a href="product-details.html">Streit
-                                            Factory</a>
-                                    </h3>
-                                    <p class="hot-products__price">Commercial</p>
-                                    <div class="hot-products__btn-box">
-                                        <a href="cart.html" class="hot-products__btn thm-btn">More</a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Hot Products Two Single End -->
-                    <!-- Hot Products Two Single Start -->
-                    <div class="col-xl-4 col-lg-6 col-md-6 filter-item fresh Commercial">
-                        <div class="hot-products__single">
-                            <div class="hot-products__single-inner">
-                                <div class="hot-products__img-box">
-                                    <div class="hot-products__img">
-                                        <img src="{{ asset('orionFrontAssets/assets/images/project/Picture10.png') }}"
-                                            alt="">
-                                    </div>
-                                </div>
-                                <div class="hot-products__content">
-                                    <!-- <div class="hot-products__rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div> -->
-                                    <h3 class="hot-products__title"><a href="product-details.html">Rakez
-                                            Warehouses</a>
-                                    </h3>
-                                    <p class="hot-products__price">Turnkey Solution</p>
-                                    <div class="hot-products__btn-box">
-                                        <a href="cart.html" class="hot-products__btn thm-btn">More</a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Hot Products Two Single End -->
-
+                        <!-- Hot Products Two Single End -->
+                    @endforeach
                     <div class="testimonial-one__btn-box offset-5">
-                        <a href="testimonials.html" class="testimonial-one__btn thm-btn">View all
+                        <a href="{{ route('projects.index') }}" class="testimonial-one__btn thm-btn">View all
                             Projects</a>
                     </div>
                 </div>
@@ -1369,138 +1128,17 @@ $p_nam = 'home';
 
         <div class="col-12">
             <div class="row">
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/client13.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/Clinet02.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/clinet007.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/Clinet04.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/Clinet001.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/clinet004.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/clinet005.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/Clinet00.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/client12.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/Clinet0.jpg') }}" alt="" srcset="">
-                </div>
+                @foreach ($clients as $client )
+                    <div class="col clinet-logo-item">
+                        <img src="{{ asset('orionFrontAssets/assets/images/clinets/' . $client->logo) }}" alt="{{ $client->name . ' company image' }}" srcset="">
+                    </div>
+                @endforeach
 
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/clinet006.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/Clinet09.jpg') }}" alt="" srcset="">
-                </div>
-
-
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/Clinet01.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/Clinet010.jpg') }}" alt="" srcset="">
-                </div>
-
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/Clinet03.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/Clinet05.jpg') }}" alt="" srcset="">
-                </div>
-
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/Clinet06.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/Clinet07.jpg') }}" alt="" srcset="">
-                </div>
-
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/Clinet08.jpg') }}" alt="" srcset="">
-                </div>
-
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/client14.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/clinet11.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/client15.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/client17.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/client18.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/client19.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/clinet008.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/Clinet009.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/client20.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/client23.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/client21..jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/client22.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/client24.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/client25.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/client26.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/client27.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/client28.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/client29.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/client30.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/client31.jpg') }}" alt="" srcset="">
-                </div>
-                <div class="col clinet-logo-item">
-                    <img src="{{ asset('orionFrontAssets/assets/images/clinets/client32.jpg') }}" alt="" srcset="">
-                </div>
             </div>
-            <div class="testimonial-one__btn-box offset-5">
+            {{-- <div class="testimonial-one__btn-box offset-5">
                 <a href="testimonials.html" class="testimonial-one__btn thm-btn">View all
                     Clients</a>
-            </div>
+            </div> --}}
         </div>
     </div>
 

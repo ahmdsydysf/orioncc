@@ -17065,3 +17065,18 @@ canvas {
 .product__menu-showing-sort .product__menu .icon-list {
     font-size: xx-large;
 }
+.fs-18 {
+    font-size: 18px !important;
+}
+.f-clr-w {
+    color: white !important;
+}
+.why-choose-one.about-page .why-choose-one__shape-1 {
+    position: absolute;
+    top: 374px;
+    left: 0;
+    z-index: -1;
+}
+.why-choose-one.about-page .why-choose-one__shape-1 img {
+    width: 34%;
+}
